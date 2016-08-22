@@ -1,0 +1,6 @@
+framework module BLAMPayment {
+  umbrella header "BLAMPayment-umbrella.h"
+
+  export *
+  module * { export * }
+}

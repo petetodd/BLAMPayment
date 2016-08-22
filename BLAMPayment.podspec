@@ -31,7 +31,10 @@ TODO: Add long description of the pod here.
   s.ios.deployment_target = '8.0'
 
   s.source_files = 'BLAMPayment/Classes/**/*'
-  
+    s.resource_bundles = {
+'BLAMPayment' => ['BLAMPayment/Classes/**/*.{storyboard,xib}']
+}
+
   # s.resource_bundles = {
   #   'BLAMPayment' => ['BLAMPayment/Assets/*.png']
   # }
