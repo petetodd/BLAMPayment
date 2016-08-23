@@ -3,6 +3,7 @@ use_frameworks!
 target 'BLAMPayment_Example' do
   pod 'BLAMPayment', :path => '../'
 
+
   target 'BLAMPayment_Tests' do
     inherit! :search_paths
 

@@ -9,7 +9,7 @@
 Pod::Spec.new do |s|
   s.name             = 'BLAMPayment'
   s.version          = '0.1.0'
-  s.summary          = 'A short description of BLAMPayment.'
+  s.summary          = 'A Collection View based interface for selecting enrollment options.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,10 +18,10 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-TODO: Add long description of the pod here.
+Users can review and select an enrollment option.  This can simple be added to a project by subclassing a UIView as BLAMPaymentCVView.  Designed to work on an iPad
                        DESC
 
-  s.homepage         = 'https://github.com/<GITHUB_USERNAME>/BLAMPayment'
+  s.homepage         = 'https://github.com/petetodd/BLAMPayment'
   # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Peter Todd' => 'peter@petertodd.com' }
@@ -41,5 +41,5 @@ TODO: Add long description of the pod here.
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  # s.dependency 'AFNetworking', '~> 2.3'
+  s.dependency 'FontAwesome'
 end

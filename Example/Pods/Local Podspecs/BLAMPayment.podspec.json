@@ -1,9 +1,9 @@
 {
   "name": "BLAMPayment",
   "version": "0.1.0",
-  "summary": "A short description of BLAMPayment.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/BLAMPayment",
+  "summary": "A Collection View based interface for selecting enrollment options.",
+  "description": "Users can review and select an enrollment option.  This can simple be added to a project by subclassing a UIView as BLAMPaymentCVView.  Designed to work on an iPad",
+  "homepage": "https://github.com/petetodd/BLAMPayment",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
@@ -22,6 +22,11 @@
   "resource_bundles": {
     "BLAMPayment": [
       "BLAMPayment/Classes/**/*.{storyboard,xib}"
+    ]
+  },
+  "dependencies": {
+    "FontAwesome": [
+
     ]
   }
 }

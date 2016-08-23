@@ -11,21 +11,23 @@ import UIKit
 private let reuseIdentifier = "BLAMPaymentCVCell"
 
 
-class BLAMPaymentCVDataSource: NSObject {
+class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
     
     // MARK: UICollectionViewDataSource
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+         return 3
+    }
     
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    
+    
+    
+
+   func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
-    
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 3
-    }
-    
+
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! BLAMPaymentCVCell
 
@@ -33,6 +35,8 @@ class BLAMPaymentCVDataSource: NSObject {
         
         return cell
     }
+ 
+
 
 
 }

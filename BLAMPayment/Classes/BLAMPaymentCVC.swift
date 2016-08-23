@@ -11,6 +11,8 @@ import UIKit
 private let reuseIdentifier = "BLAMPaymentCVCell"
 
 class BLAMPaymentCVC: UICollectionViewController {
+    
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,7 +27,8 @@ class BLAMPaymentCVC: UICollectionViewController {
         let podBundle = NSBundle(forClass: BLAMPaymentCVC.self)
         let bundleURL = podBundle.URLForResource("BLAMPayment", withExtension: "bundle")
         let bundle = NSBundle(URL: bundleURL!)!
-
+        
+      
         self.collectionView!.registerNib( UINib(nibName: "BLAMPaymentCVCell", bundle: podBundle), forCellWithReuseIdentifier: reuseIdentifier)
         
     }
@@ -34,6 +37,8 @@ class BLAMPaymentCVC: UICollectionViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
 
     /*
     // MARK: - Navigation

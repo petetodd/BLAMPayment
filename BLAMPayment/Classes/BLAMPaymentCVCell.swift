@@ -10,9 +10,15 @@ import UIKit
 
 class BLAMPaymentCVCell: UICollectionViewCell {
 
+    @IBOutlet weak var lblIcon: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+    }
+    
+    
+    func configView(){
+        lblIcon.text = "\u{f015}"
     }
 
 }

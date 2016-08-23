@@ -1,10 +1,12 @@
 PODS:
-  - BLAMPayment (0.1.0)
+  - BLAMPayment (0.1.0):
+    - FontAwesome
   - FBSnapshotTestCase (2.1.1):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.1)
   - FBSnapshotTestCase/Core (2.1.1)
   - FBSnapshotTestCase/SwiftSupport (2.1.1):
     - FBSnapshotTestCase/Core
+  - FontAwesome (4.5.0)
   - Nimble (3.2.0)
   - Nimble-Snapshots (4.1.0):
     - FBSnapshotTestCase (~> 2.0)
@@ -24,12 +26,13 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BLAMPayment: 137c2ca48f31330efcb950f4330db80ddf8f0a8d
+  BLAMPayment: 473eedcbd1242389ed45110ca62d3c800c52899d
   FBSnapshotTestCase: 432afd8d059ccef7f207225894840a03fbcf7474
+  FontAwesome: dd8c48bf965e771309d8af17c4d8579217b3e756
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Nimble-Snapshots: 2da4d2ec829b458d6886c06812c52493fce284c9
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
 
-PODFILE CHECKSUM: 113d3b945b9f3694bf8f11578fc5f3b5fa43c278
+PODFILE CHECKSUM: 4085bcfde88c85e73fc1009f3e2d8f476d76f6c0
 
 COCOAPODS: 1.0.1
