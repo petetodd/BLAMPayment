@@ -11,6 +11,10 @@ import UIKit
 class BLAMPaymentCVCell: UICollectionViewCell {
 
     @IBOutlet weak var lblIcon: UILabel!
+    
+    @IBOutlet weak var lblTitle: UILabel!
+    
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

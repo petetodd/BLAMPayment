@@ -13,9 +13,12 @@ private let reuseIdentifier = "BLAMPaymentCVCell"
 
 class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
     
+    var dictData : Dictionary <String, BLAMPaymentItemModel>!
+
+    
     // MARK: UICollectionViewDataSource
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-         return 3
+         return dictData.count
     }
     
     
@@ -32,6 +35,18 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! BLAMPaymentCVCell
 
         // Configure the cell
+        let keys = Array(dictData.keys)
+        let key = keys[indexPath.row]
+        let dataModel = dictData[key]
+        let strIconU = "\u{f015}"
+        
+        let strIcon = String.fontA
+        
+        
+      //  cell.lblIcon.text =
+     //   cell.lblTitle.text = dataModel?.strTitle
+        
+        
         
         return cell
     }

@@ -41,5 +41,5 @@ Users can review and select an enrollment option.  This can simple be added to a
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'FontAwesome'
+  s.dependency 'FontAwesome.swift'
 end

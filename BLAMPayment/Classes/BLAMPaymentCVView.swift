@@ -11,20 +11,28 @@ import UIKit
 private let reuseIdentifier = "BLAMPaymentCVCell"
 
 
-class BLAMPaymentCVView: UIView {
-    var collectionView : UICollectionView!
+public class BLAMPaymentCVView: UIView {
+    public var collectionView : UICollectionView!
     let dataSource = BLAMPaymentCVDataSource()
+    var dictData : Dictionary <String, BLAMPaymentItemModel>!
 
-    /*
+
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
-    override func drawRect(rect: CGRect) {
+    override public func drawRect(rect: CGRect) {
         // Drawing code
+        configAll()
+
     }
-    */
+
     
-    required init?(coder aDecoder: NSCoder) {
-        super.init(coder: aDecoder)
+
+    
+    public func configAll(){
+        if collectionView != nil{
+            collectionView.removeFromSuperview()
+
+        }
         self.configView()
         configCV()
     }
@@ -34,8 +42,10 @@ class BLAMPaymentCVView: UIView {
     }
     
     func configCV(){
-        let layout = UICollectionViewFlowLayout()
-        
+        demoData()
+        dataSource.dictData = dictData
+
+        let layout = BLAMPaymentCVLayout()
         collectionView = UICollectionView.init(frame: self.bounds, collectionViewLayout: layout)
         
         // Register cell classes
@@ -49,9 +59,21 @@ class BLAMPaymentCVView: UIView {
         // Set datasource
         collectionView.dataSource = dataSource
         
+
+        
         self.addSubview(collectionView)
-        
-        
+
+    }
+    
+    func demoData(){
+        let item1 = BLAMPaymentItemModel.init(awesomeIcon: "{f015}", strTitle: "Single user", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Single Asset", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE")
+        let item2 = BLAMPaymentItemModel.init(awesomeIcon: "u{f015}", strTitle: "Team", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Team", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE")
+        let item3 = BLAMPaymentItemModel.init(awesomeIcon: "\u{f015}", strTitle: "Business", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Business", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE")
+        let item4 = BLAMPaymentItemModel.init(awesomeIcon: "\u{f015}", strTitle: "Corporate", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Corporate", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE")
+        let item5 = BLAMPaymentItemModel.init(awesomeIcon: "\u{f015}", strTitle: "Enterprise", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Enterprise", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE")
+        dictData = ["item1": item1, "item2": item2, "item3": item3, "item4": item4, "item5": item5 ]
+
+   
         
     }
 

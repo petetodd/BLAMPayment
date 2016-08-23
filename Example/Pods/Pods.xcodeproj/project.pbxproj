@@ -132,6 +132,8 @@
 		CBB70E882E7FE0FF926730EAA0CD59DA /* ExampleGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03FFFE785C95B99F4E114CC4D5ADC77B /* ExampleGroup.swift */; };
 		CD0A671D2A8DD31D50449BB358C56134 /* Expression.swift in Sources */ = {isa = PBXBuildFile; fileRef = E9824A660736AFD1F257BAF39C1B3316 /* Expression.swift */; };
 		CF68D6F027428A6F273619A81DFA9162 /* FAImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 320118A5A1DC99105FF6F5A2A1C28AE9 /* FAImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D07EA5C41D6C8D7F00E972E6 /* BLAMPaymentItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07EA5C31D6C8D7F00E972E6 /* BLAMPaymentItemProtocol.swift */; };
+		D07EA5C61D6C94BC00E972E6 /* BLAMPaymentItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = D07EA5C51D6C94BC00E972E6 /* BLAMPaymentItemModel.swift */; };
 		D39881E8AB50A77DABF756314695BF25 /* PrettySyntax.swift in Sources */ = {isa = PBXBuildFile; fileRef = 259E538B1E1EF692420CBF503008BC5D /* PrettySyntax.swift */; };
 		D39D7A9422384FEA6463626792C00FF4 /* QuickSpec.m in Sources */ = {isa = PBXBuildFile; fileRef = F92C5F3153CFB8191DFF3E0F5CAD0A43 /* QuickSpec.m */; };
 		D41F628A81153A978EB209E4FE925700 /* Nimble.h in Headers */ = {isa = PBXBuildFile; fileRef = BAA6D36136B942BCA44FB1EE641B12C2 /* Nimble.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -394,6 +396,8 @@
 		C53E47755E2BCCC04DC27A2E376BEF5A /* BLAMPayment-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLAMPayment-umbrella.h"; sourceTree = "<group>"; };
 		CCEA905E72F68749CC7BDBDF53A5C809 /* FBSnapshotTestCase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FBSnapshotTestCase-prefix.pch"; sourceTree = "<group>"; };
 		CD27C2E9E3457C20E9429A8F68E68768 /* QuickTestSuite.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickTestSuite.swift; path = Sources/Quick/QuickTestSuite.swift; sourceTree = "<group>"; };
+		D07EA5C31D6C8D7F00E972E6 /* BLAMPaymentItemProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLAMPaymentItemProtocol.swift; sourceTree = "<group>"; };
+		D07EA5C51D6C94BC00E972E6 /* BLAMPaymentItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BLAMPaymentItemModel.swift; sourceTree = "<group>"; };
 		D18316EBBC456178D169CEEC045272CB /* FBSnapshotTestCasePlatform.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FBSnapshotTestCasePlatform.m; path = FBSnapshotTestCase/FBSnapshotTestCasePlatform.m; sourceTree = "<group>"; };
 		D1BAC9A2F3D20CEACB770B2B06B0FC8F /* QuickSelectedTestSuiteBuilder.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = QuickSelectedTestSuiteBuilder.swift; path = Sources/Quick/QuickSelectedTestSuiteBuilder.swift; sourceTree = "<group>"; };
 		D1CAC4A73D505D4F80BF5A1F3AB75031 /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
@@ -530,6 +534,8 @@
 				AFD1131C2D18BFFFFDED0F0ED84D3083 /* BLAMPaymentCVLayout.swift */,
 				44F289D78694BD8DD398E9768CA88652 /* BLAMPaymentCVView.swift */,
 				D1CAC4A73D505D4F80BF5A1F3AB75031 /* ReplaceMe.swift */,
+				D07EA5C31D6C8D7F00E972E6 /* BLAMPaymentItemProtocol.swift */,
+				D07EA5C51D6C94BC00E972E6 /* BLAMPaymentItemModel.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1262,7 +1268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				76E921F9AFF776E2147C74F062938923 /* BLAMPayment-dummy.m in Sources */,
+				D07EA5C41D6C8D7F00E972E6 /* BLAMPaymentItemProtocol.swift in Sources */,
 				A41ECF8DED1092FF6B262C382781572E /* BLAMPaymentCVC.swift in Sources */,
+				D07EA5C61D6C94BC00E972E6 /* BLAMPaymentItemModel.swift in Sources */,
 				3A297E2ABF374C8A64BDD6A309600DEA /* BLAMPaymentCVCell.swift in Sources */,
 				F69CDF9A5DF0C8C009E0F80F9487D4F4 /* BLAMPaymentCVCell.xib in Sources */,
 				B6FC568E21F612BF45BDA8266025E3F2 /* BLAMPaymentCVDataSource.swift in Sources */,

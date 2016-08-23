@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <customFonts key="customFonts">
-        <mutableArray key="fontawesome-webfont.ttf">
+        <mutableArray key="FontAwesome.ttf">
             <string>FontAwesome</string>
         </mutableArray>
     </customFonts>
@@ -72,6 +72,7 @@
             <color key="backgroundColor" red="0.55294120309999995" green="0.83529418710000003" blue="0.90588241820000004" alpha="1" colorSpace="deviceRGB"/>
             <connections>
                 <outlet property="lblIcon" destination="xvO-GH-h2F" id="0az-kC-wx9"/>
+                <outlet property="lblTitle" destination="sAv-TB-ow3" id="dwL-tD-vlb"/>
             </connections>
             <point key="canvasLocation" x="461" y="476"/>
         </collectionViewCell>

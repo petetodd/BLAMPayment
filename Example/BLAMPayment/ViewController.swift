@@ -7,15 +7,26 @@
 //
 
 import UIKit
+import BLAMPayment
 
 class ViewController: UIViewController {
     
-
+ 
+    @IBOutlet weak var viewBLAMPayment: BLAMPaymentCVView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
     }
+    
+ //  override func viewDidLayoutSubviews() {
+  //  }
+    
+    override func didRotateFromInterfaceOrientation(fromInterfaceOrientation: UIInterfaceOrientation) {
+        viewBLAMPayment.configAll()
+    }
+
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

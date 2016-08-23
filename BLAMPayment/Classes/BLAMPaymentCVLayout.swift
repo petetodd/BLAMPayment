@@ -8,6 +8,99 @@
 
 import UIKit
 
-class BLAMPaymentCVLayout: UICollectionViewLayout {
+class BLAMPaymentCVLayout: UICollectionViewFlowLayout {
+    
+    var screenSize : CGRect!
+    var screenWidth : CGFloat!
+    var screenHeight : CGFloat!
+    
+    var xOffset:Int = 20
+    var yOffset:Int = 0
+
+    // Cell size
+    var cellWidth = 300
+    var cellHeight = 600
+    
+    override func collectionViewContentSize() -> CGSize {
+        screenSize = self.collectionView!.frame
+        screenWidth = screenSize.width
+        screenHeight = screenSize.height
+        
+        // Size the contentview to show 41 years (20 years past and future plus current year
+        let dataSource:BLAMPaymentCVDataSource = (self.collectionView?.dataSource as? BLAMPaymentCVDataSource)!
+        let intItemCt = dataSource.dictData.count
+        let widthView = cellWidth * intItemCt
+        
+        // Calculate a yOffset to center items
+        if Int(screenHeight) > cellHeight{
+            let diff = Int(screenHeight) - cellHeight
+            yOffset = diff / 2
+        }
+        
+        return CGSizeMake(CGFloat(widthView), CGFloat(cellHeight))
+    }
+    
+    override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+        // Cells
+        var attributesToReturn = [UICollectionViewLayoutAttributes]()
+        var visibleRect = CGRectZero
+        visibleRect.origin = (self.collectionView?.contentOffset)!
+        visibleRect.size = (self.collectionView?.bounds.size)!
+
+        
+        // Cells
+        // Could restrict this to the visible cells - might need this with a more complex dash
+        for indexPath in indexPathsOfItemsInRect(visibleRect)
+        {
+            attributesToReturn.append((layoutAttributesForItemAtIndexPath(indexPath as! NSIndexPath)!))
+        }
+        
+ 
+        
+        // Background decoration view
+  //      let decorationIndexPath = (NSIndexPath(forItem: 0, inSection: 0))
+ //       attributesToReturn.append((layoutAttributesForDecorationViewOfKind("BackgroundView", atIndexPath: decorationIndexPath))!)
+        
+        
+        
+        return attributesToReturn
+    }
+    
+    
+    override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
+        let dataSource:BLAMPaymentCVDataSource = (self.collectionView?.dataSource as? BLAMPaymentCVDataSource)!
+        let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
+        var frame = CGRectZero
+        frame.size.height = CGFloat(cellHeight)
+        frame.size.width = CGFloat(cellWidth)
+        
+        let xPt = xOffset + (indexPath.row * cellWidth) + (xOffset * indexPath.row)
+        
+        frame.origin.x = CGFloat(xPt)
+        frame.origin.y = CGFloat(yOffset)
+        attributes.zIndex = 20
+        attributes.frame = frame
+
+        
+        
+        
+        return attributes
+    }
+    
+    
+    // MARK: - Helpers
+    func indexPathsOfItemsInRect(rect:CGRect) ->NSArray
+    {
+        let indexPaths = NSMutableArray()
+        
+        let dataSource:BLAMPaymentCVDataSource = (self.collectionView?.dataSource as? BLAMPaymentCVDataSource)!
+        // Create an array of the visible Index paths (or as we have a small number just add all to the array
+        for i in 0 ..< dataSource.dictData.count{
+            indexPaths.addObject(NSIndexPath(forItem: i, inSection: 0))
+        }
+
+        return indexPaths
+        
+    }
 
 }
