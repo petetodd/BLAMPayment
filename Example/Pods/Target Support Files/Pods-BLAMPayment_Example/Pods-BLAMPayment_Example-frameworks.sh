@@ -85,9 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/BLAMPayment/BLAMPayment.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FontAwesome/FontAwesome.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/FontAwesome.swift/FontAwesome_swift.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/BLAMPayment/BLAMPayment.framework"
-  install_framework "$BUILT_PRODUCTS_DIR/FontAwesome/FontAwesome.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/FontAwesome.swift/FontAwesome_swift.framework"
 fi

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 private let reuseIdentifier = "BLAMPaymentCVCell"
 
@@ -38,13 +39,12 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         let keys = Array(dictData.keys)
         let key = keys[indexPath.row]
         let dataModel = dictData[key]
-        let strIconU = "\u{f015}"
+       // let str1 = "fa-github"
+        let strIcon = String.fontAwesomeIconWithCode(dataModel!.awesomeIcon)
         
-        let strIcon = String.fontA
-        
-        
-      //  cell.lblIcon.text =
-     //   cell.lblTitle.text = dataModel?.strTitle
+        cell.lblIcon.font =  UIFont.fontAwesomeOfSize(80)
+        cell.lblIcon.text = strIcon
+        cell.lblTitle.text = dataModel?.awesomeIcon
         
         
         

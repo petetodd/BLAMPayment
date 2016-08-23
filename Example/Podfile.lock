@@ -1,12 +1,12 @@
 PODS:
   - BLAMPayment (0.1.0):
-    - FontAwesome
+    - FontAwesome.swift
   - FBSnapshotTestCase (2.1.1):
     - FBSnapshotTestCase/SwiftSupport (= 2.1.1)
   - FBSnapshotTestCase/Core (2.1.1)
   - FBSnapshotTestCase/SwiftSupport (2.1.1):
     - FBSnapshotTestCase/Core
-  - FontAwesome (4.5.0)
+  - FontAwesome.swift (0.8.0)
   - Nimble (3.2.0)
   - Nimble-Snapshots (4.1.0):
     - FBSnapshotTestCase (~> 2.0)
@@ -26,9 +26,9 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BLAMPayment: 473eedcbd1242389ed45110ca62d3c800c52899d
+  BLAMPayment: 8c9b7c189d4edd741a3a0ffa529ebeb032ce2dfb
   FBSnapshotTestCase: 432afd8d059ccef7f207225894840a03fbcf7474
-  FontAwesome: dd8c48bf965e771309d8af17c4d8579217b3e756
+  FontAwesome.swift: f8c6cc5c42cbe93bdc04371363bc7b371fb3d3a1
   Nimble: 703854335d181df169bbca9c97117b5cf8c47c1d
   Nimble-Snapshots: 2da4d2ec829b458d6886c06812c52493fce284c9
   Quick: 18d057bc66451eedd5d1c8dc99ba2a5db6e60226
