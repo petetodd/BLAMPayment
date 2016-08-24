@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import PassKit
 
 class BLAMPaymentCVCell: UICollectionViewCell {
 
@@ -14,6 +15,20 @@ class BLAMPaymentCVCell: UICollectionViewCell {
     
     @IBOutlet weak var lblTitle: UILabel!
     
+    @IBOutlet weak var tvDesc: UITextView!
+    
+    @IBOutlet weak var lblText1: UILabel!
+    
+    @IBOutlet weak var lblText2: UILabel!
+    
+    @IBOutlet weak var lblText3: UILabel!
+    
+    @IBOutlet weak var lblText4: UILabel!
+    
+    @IBOutlet weak var lblPrice: UILabel!
+    
+    
+    @IBOutlet weak var viewPayFrame: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -28,7 +28,7 @@ Users can review and select an enrollment option.  This can simple be added to a
   s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/BLAMPayment.git', :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
-  s.ios.deployment_target = '8.0'
+  s.ios.deployment_target = '9.3'
 
   s.source_files = 'BLAMPayment/Classes/**/*'
     s.resource_bundles = {

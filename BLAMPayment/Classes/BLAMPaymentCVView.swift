@@ -42,7 +42,10 @@ public class BLAMPaymentCVView: UIView {
     }
     
     func configCV(){
-        demoData()
+        if dictData == nil {
+            demoData()
+        }
+        
         dataSource.dictData = dictData
 
         let layout = BLAMPaymentCVLayout()
@@ -59,10 +62,24 @@ public class BLAMPaymentCVView: UIView {
         // Set datasource
         collectionView.dataSource = dataSource
         
+        // Set a white background (we could use a Decoration View)
+        collectionView.backgroundColor = UIColor.whiteColor()
+        
 
         
         self.addSubview(collectionView)
 
+    }
+    
+    public func addDisplayItem(inDict : Dictionary <String, String>){
+        let itemModel = BLAMPaymentItemModel.init(awesomeIcon: inDict["awesomeIcon"]!, strTitle: inDict["strTitle"]!, strDesc: inDict["strDesc"]!, text1: inDict["text1"]!, text2: inDict["text2"]!, text3: inDict["text3"]!, text4: inDict["text4"]!, textPrice: inDict["textPrice"]!)
+        // dictData = [inDict["valDisplayOrder"]!: itemModel]
+        if dictData == nil{
+            dictData = [inDict["displayOrder"]!: itemModel]
+        }else{
+            dictData[inDict["displayOrder"]!] = itemModel
+        }
+    
     }
     
     func demoData(){
