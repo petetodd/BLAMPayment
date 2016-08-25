@@ -29,7 +29,7 @@ class BLAMPaymentCVLayout: UICollectionViewFlowLayout {
         // Size the contentview to show 41 years (20 years past and future plus current year
         let dataSource:BLAMPaymentCVDataSource = (self.collectionView?.dataSource as? BLAMPaymentCVDataSource)!
         let intItemCt = dataSource.dictData.count
-        let widthView = cellWidth * intItemCt
+        let widthView =  xOffset + ((xOffset + cellWidth) * intItemCt)
         
         // Calculate a yOffset to center items
         if Int(screenHeight) > cellHeight{
@@ -68,7 +68,6 @@ class BLAMPaymentCVLayout: UICollectionViewFlowLayout {
     
     
     override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
-        let dataSource:BLAMPaymentCVDataSource = (self.collectionView?.dataSource as? BLAMPaymentCVDataSource)!
         let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
         var frame = CGRectZero
         frame.size.height = CGFloat(cellHeight)

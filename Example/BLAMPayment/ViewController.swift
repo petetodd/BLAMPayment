@@ -9,7 +9,7 @@
 import UIKit
 import BLAMPayment
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
     
  
     @IBOutlet weak var viewBLAMPayment: BLAMPaymentCVView!
@@ -17,7 +17,9 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        configData()
+        viewBLAMPayment.delegate = self
+        configBLAM()
+        configBLAMData()
 
     }
     
@@ -29,22 +31,51 @@ class ViewController: UIViewController {
     }
 
     //MARK: - BLAMPaymentCVView
-    //MARK: Data config
-    /*
-     BLAMPaymentCVView uses a dictionary of Subscription types.  If you do not supply this then it will show 
-     demo items.
- 
- */
     
+    //MARK: BLAMPaymentCVViewProtocol
+    
+    func payWithApplePay(codeISO: String, amount: NSNumber){
+        let message = "The user would like to enroll using apple pay at a cost of \(codeISO)\(amount).  You need to implement this!"
+        let alert = UIAlertController(title: "Pay with apple pay",
+                                      message: message,
+                                      preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(defaultAction)
+        self.presentViewController(alert, animated: true, completion: nil)
 
-    func configData(){
+        
+    }
+    func payWithOtherPay(codeISO: String, amount: NSNumber){
+        let message = "The user would like to enroll using another method of payment at a cost of \(codeISO)\(amount).  You need to implement this!"
+        let alert = UIAlertController(title: "Pay with Other Payment method",
+                                      message: message,
+                                      preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(defaultAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    //MARK: BLAM UI config
+    /*
+     Set custom colors.
+     
+     */
+    
+    func configBLAM(){
+        
+    }
+ 
+
+    func configBLAMData(){
         // Dictionary for display Item
         // Item 1 - a single user subscription
         var dictData = Dictionary <String,AnyObject>()
         var valDisplayOrder = "1"
         var valAwesomeIcon = "fa-home"
         var valTitle = "Single user"
-        var valDesc = "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure."
+        var valDesc = "Description about some single user stuff."
         var valText1 = "Single Asset"
         var valText2 = "1 - User"
         var valText3 = "No team sharing"
@@ -61,7 +92,7 @@ class ViewController: UIViewController {
         valDisplayOrder = "2"
         valAwesomeIcon = "fa-users"
         valTitle = "Micro"
-        valDesc = "Recommended for small teams manageing up to 10 properties.  Includes all the team and client sharing features found in our enterprise range."
+        valDesc = "Description about features for the Micro product."
         valText1 = "5 Users"
         valText2 = "10 Assets"
         valText3 = "Team sharing"
@@ -77,7 +108,7 @@ class ViewController: UIViewController {
         valDisplayOrder = "3"
         valAwesomeIcon = "fa-user-plus"
         valTitle = "Team"
-        valDesc = "Best for professional teams managing a diverse range of property rental assets."
+        valDesc = "Description about features for the professional team product."
         valText1 = "25 Users"
         valText2 = "Unlimited Assets"
         valText3 = "Team sharing"
@@ -93,7 +124,7 @@ class ViewController: UIViewController {
         valDisplayOrder = "4"
         valAwesomeIcon = "fa-bank"
         valTitle = "Corporate"
-        valDesc = "Support up to 100 team members manageing rental assets.  Recommended if you require a broader business access to your leased asset management activities."
+        valDesc = "Description about features for the corporate product."
         valText1 = "100 Users"
         valText2 = "Unlimited Assets"
         valText3 = "Team sharing"
@@ -109,7 +140,7 @@ class ViewController: UIViewController {
         valDisplayOrder = "5"
         valAwesomeIcon = "fa-globe"
         valTitle = "Enterprise"
-        valDesc = "Support unlimited users.  Recommended if you are running a global asset management business with teams in remote locations and jurisdictions."
+        valDesc = "Description about features for the Enterprise product."
         valText1 = "Unlimited Users"
         valText2 = "Unlimited Assets"
         valText3 = "Team sharing"
@@ -119,14 +150,6 @@ class ViewController: UIViewController {
         valCurrCode = "USD"
         dictData = ["displayOrder": valDisplayOrder, "awesomeIcon": valAwesomeIcon, "strTitle": valTitle, "strDesc": valDesc, "text1": valText1, "text2": valText2, "text3": valText3 , "text4": valText4 , "textPrice": valTextPrice, "price": valPrice, "codeISO": valCurrCode  ]
         viewBLAMPayment.addDisplayItem(dictData)
-        
-
-
-        
-        
-
-        
-
 
     }
 

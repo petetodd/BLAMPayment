@@ -9,7 +9,14 @@
 import UIKit
 import PassKit
 
+protocol BLAMPaymentCVCellProtocol {
+    func payApple(codeISO: String, amount: NSNumber)
+    func payOther(codeISO: String, amount: NSNumber)
+}
+
 class BLAMPaymentCVCell: UICollectionViewCell {
+    var delegate: BLAMPaymentCVCellProtocol! = nil
+    var model: BLAMPaymentItemModel!
 
     @IBOutlet weak var lblIcon: UILabel!
     
@@ -42,4 +49,12 @@ class BLAMPaymentCVCell: UICollectionViewCell {
         lblIcon.text = "\u{f015}"
     }
 
+    @IBAction func butOtherAction(sender: AnyObject) {
+        delegate.payOther(model.codeISO, amount: model.price)
+    }
+    
+    func butApplePAyAction(){
+        delegate.payApple(model.codeISO, amount: model.price)
+
+    }
 }

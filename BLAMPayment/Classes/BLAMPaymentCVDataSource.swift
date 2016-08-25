@@ -17,6 +17,7 @@ private let reuseIdentifier = "BLAMPaymentCVCell"
 class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
     
     var dictData : Dictionary <String, BLAMPaymentItemModel>!
+    var callingView : BLAMPaymentCVView!
 
     
     // MARK: UICollectionViewDataSource
@@ -41,6 +42,8 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         let keys = Array(dictData.keys).sort(<)
         let key = keys[indexPath.row]
         let dataModel = dictData[key]
+        cell.model = dataModel
+        cell.delegate = callingView
        // let str1 = "fa-github"
         let strIcon = String.fontAwesomeIconWithCode(dataModel!.awesomeIcon)
         
@@ -64,10 +67,15 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
             // Price
             cell.lblPrice.text = dataModel?.textPrice
             cell.butOtherPayOptions.hidden = true
+            let viewApple = cell.viewWithTag(100)
+            if viewApple != nil{
+                viewApple?.removeFromSuperview()
+            }
             return cell
         }
         // Create a price label with amount and currency code (if supported)
         cell.butOtherPayOptions.hidden = false
+        cell.viewPayFrame.hidden = false
         
         let strCurrCode = currCodeHexFromISO((dataModel?.codeISO)!)
         let strLabelPrice = "\(strCurrCode)\(dataModel!.price) \(dataModel!.textPrice)"
@@ -78,6 +86,8 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         
         
         let butApplePay = PKPaymentButton()
+        butApplePay.tag = 100
+        butApplePay.addTarget(cell, action: #selector(cell.butApplePAyAction), forControlEvents: .TouchUpInside)
         butApplePay.frame = cell.viewPayFrame.frame
         cell.addSubview(butApplePay)
 

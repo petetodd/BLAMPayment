@@ -8,8 +8,8 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLAMPayment'
-  s.version          = '0.1.0'
-  s.summary          = 'A Collection View based interface for selecting enrollment options.'
+  s.version          = '0.2.0'
+  s.summary          = 'A Collection View based interface for selecting enrollment options.  To implement simply subclass a UIView.'
 
 # This description is used to generate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
@@ -18,15 +18,15 @@ Pod::Spec.new do |s|
 #   * Finally, don't worry about the indent, CocoaPods strips it!
 
   s.description      = <<-DESC
-Users can review and select an enrollment option.  This can simple be added to a project by subclassing a UIView as BLAMPaymentCVView.  Designed to work on an iPad
+A configurable subscription selection interface to enable a user to view the features and to select to which product they would like to subscribe.  An Apple Pay amd Other Pay button use delegation to inform the calling UIView the amount and currency the user has selected.  Designed for iPad.
                        DESC
 
   s.homepage         = 'https://github.com/petetodd/BLAMPayment'
-  # s.screenshots     = 'www.example.com/screenshots_1', 'www.example.com/screenshots_2'
+  # s.screenshots     = 'http://www.brightbluecircle.com/img/BLAM1.png', 'http://www.brightbluecircle.com/img/BLAM2.png', 'http://www.brightbluecircle.com/img/BLAM3.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Peter Todd' => 'peter@petertodd.com' }
-  s.source           = { :git => 'https://github.com/<GITHUB_USERNAME>/BLAMPayment.git', :tag => s.version.to_s }
-  # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
+  s.source           = { :git => 'https://github.com/<petetodd/BLAMPayment.git', :tag => s.version.to_s }
+  s.social_media_url = 'https://twitter.com/PeteTodd'
 
   s.ios.deployment_target = '9.3'
 

@@ -11,8 +11,15 @@ import UIKit
 private let reuseIdentifier = "BLAMPaymentCVCell"
 
 
-public class BLAMPaymentCVView: UIView {
+public protocol BLAMPaymentCVViewProtocol {
+    func payWithApplePay(codeISO: String, amount: NSNumber)
+    func payWithOtherPay(codeISO: String, amount: NSNumber)
+}
+
+public class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
     public var collectionView : UICollectionView!
+    public var delegate : BLAMPaymentCVViewProtocol! = nil
+    
     let dataSource = BLAMPaymentCVDataSource()
     var dictData : Dictionary <String, BLAMPaymentItemModel>!
 
@@ -33,13 +40,10 @@ public class BLAMPaymentCVView: UIView {
             collectionView.removeFromSuperview()
 
         }
-        self.configView()
         configCV()
     }
     
-    func configView(){
-        self.backgroundColor = UIColor.redColor()
-    }
+
     
     func configCV(){
         if dictData == nil {
@@ -47,14 +51,14 @@ public class BLAMPaymentCVView: UIView {
         }
         
         dataSource.dictData = dictData
+        dataSource.callingView = self
+
 
         let layout = BLAMPaymentCVLayout()
         collectionView = UICollectionView.init(frame: self.bounds, collectionViewLayout: layout)
         
         // Register cell classes
         let podBundle = NSBundle(forClass: BLAMPaymentCVC.self)
-        let bundleURL = podBundle.URLForResource("BLAMPayment", withExtension: "bundle")
-        let bundle = NSBundle(URL: bundleURL!)!
         
         
         self.collectionView!.registerNib( UINib(nibName: "BLAMPaymentCVCell", bundle: podBundle), forCellWithReuseIdentifier: reuseIdentifier)
@@ -63,7 +67,7 @@ public class BLAMPaymentCVView: UIView {
         collectionView.dataSource = dataSource
         
         // Set a white background (we could use a Decoration View)
-        collectionView.backgroundColor = UIColor.whiteColor()
+        collectionView.backgroundColor = self.backgroundColor
         
 
         
@@ -81,6 +85,19 @@ public class BLAMPaymentCVView: UIView {
         }
     
     }
+    
+    // MARK: - BLAMPaymentCVCellProtocol
+
+    func payApple(codeISO: String, amount: NSNumber){
+        delegate.payWithApplePay(codeISO, amount: amount)
+    }
+    
+    func payOther(codeISO: String, amount: NSNumber){
+        delegate.payWithOtherPay(codeISO, amount: amount)
+    }
+
+    // MARK: - DEMO Data
+
     
     func demoData(){
         let item1 = BLAMPaymentItemModel.init(awesomeIcon: "fa-subway", strTitle: "Single user", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Single Asset", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE",  price : 0, codeISO : "USD")

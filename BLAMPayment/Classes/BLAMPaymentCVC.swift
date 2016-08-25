@@ -25,8 +25,6 @@ class BLAMPaymentCVC: UICollectionViewController {
 
         // Cell
         let podBundle = NSBundle(forClass: BLAMPaymentCVC.self)
-        let bundleURL = podBundle.URLForResource("BLAMPayment", withExtension: "bundle")
-        let bundle = NSBundle(URL: bundleURL!)!
         
       
         self.collectionView!.registerNib( UINib(nibName: "BLAMPaymentCVCell", bundle: podBundle), forCellWithReuseIdentifier: reuseIdentifier)
