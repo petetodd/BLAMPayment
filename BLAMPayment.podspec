@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLAMPayment'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'A Collection View based interface for selecting enrollment options.  To implement simply subclass a UIView.'
 
 # This description is used to generate tags and improve search results.
