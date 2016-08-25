@@ -25,7 +25,7 @@ A configurable subscription selection interface to enable a user to view the fea
   # s.screenshots     = 'http://www.brightbluecircle.com/img/BLAM1.png', 'http://www.brightbluecircle.com/img/BLAM2.png', 'http://www.brightbluecircle.com/img/BLAM3.png'
   s.license          = { :type => 'MIT', :file => 'LICENSE' }
   s.author           = { 'Peter Todd' => 'peter@petertodd.com' }
-  s.source           = { :git => 'https://github.com/<petetodd/BLAMPayment.git', :tag => s.version.to_s }
+  s.source           = { :git => 'https://github.com/petetodd/BLAMPayment.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/PeteTodd'
 
   s.ios.deployment_target = '9.3'
