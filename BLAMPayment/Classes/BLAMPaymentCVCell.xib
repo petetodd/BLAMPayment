@@ -65,20 +65,25 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$-- per month" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBk-V1-9OT">
-                        <rect key="frame" x="8" y="482" width="284" height="21"/>
+                        <rect key="frame" x="8" y="471" width="284" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="21"/>
                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Adp-Vb-CxY">
-                        <rect key="frame" x="30" y="522" width="240" height="70"/>
+                        <rect key="frame" x="50" y="500" width="200" height="60"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="40K-OR-s5p">
+                        <rect key="frame" x="126" y="562" width="166" height="30"/>
+                        <state key="normal" title="Other Payment options"/>
+                    </button>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             </view>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="butOtherPayOptions" destination="40K-OR-s5p" id="YtA-yy-7ZI"/>
                 <outlet property="lblIcon" destination="xvO-GH-h2F" id="0az-kC-wx9"/>
                 <outlet property="lblPrice" destination="UBk-V1-9OT" id="oyW-Y8-n0r"/>
                 <outlet property="lblText1" destination="kXy-1R-uNC" id="DyB-eA-543"/>

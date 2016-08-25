@@ -18,8 +18,10 @@ class BLAMPaymentItemModel: BLAMPaymentItemProtocol {
     var text3: String
     var text4: String
     var textPrice: String
+    var price: NSNumber
+    var codeISO: String
     
-    init(awesomeIcon: String, strTitle: String, strDesc: String, text1: String, text2: String, text3: String, text4: String, textPrice: String){
+    init(awesomeIcon: String, strTitle: String, strDesc: String, text1: String, text2: String, text3: String, text4: String, textPrice: String, price : NSNumber, codeISO : String){
         
         self.awesomeIcon = awesomeIcon
         self.strTitle = strTitle
@@ -29,6 +31,8 @@ class BLAMPaymentItemModel: BLAMPaymentItemProtocol {
         self.text3 = text3
         self.text4 = text4
         self.textPrice = textPrice
+        self.codeISO = codeISO
+        self.price = price
     }
 
 }

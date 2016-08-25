@@ -30,6 +30,8 @@ class BLAMPaymentCVCell: UICollectionViewCell {
     
     @IBOutlet weak var viewPayFrame: UIView!
     
+    @IBOutlet weak var butOtherPayOptions: UIButton!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
