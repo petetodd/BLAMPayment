@@ -1,6 +1,6 @@
 # BLAMPayment
 
-[![CI Status](http://img.shields.io/travis/Peter Todd/BLAMPayment.svg?style=flat)](https://travis-ci.org/Peter Todd/BLAMPayment)
+##[![CI Status](http://img.shields.io/travis/petetodd/BLAMPayment.svg?style=flat)](https://travis-ci.org/petetodd/BLAMPayment)
 [![Version](https://img.shields.io/cocoapods/v/BLAMPayment.svg?style=flat)](http://cocoapods.org/pods/BLAMPayment)
 [![License](https://img.shields.io/cocoapods/l/BLAMPayment.svg?style=flat)](http://cocoapods.org/pods/BLAMPayment)
 [![Platform](https://img.shields.io/cocoapods/p/BLAMPayment.svg?style=flat)](http://cocoapods.org/pods/BLAMPayment)
