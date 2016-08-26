@@ -88,7 +88,6 @@
 		82E55B1159083B37527C20EB4E621550 /* Nimble.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F9F043A847E11CE78C19842656990B6E /* Nimble.framework */; };
 		83DA9B6F380D643725CFEE4E9AAB9F5D /* Filter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 800BEB9BCC3CE65A6E6AB032E2A00622 /* Filter.swift */; };
 		8404F7168BDB16D6157E38B56C831CA7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 58E16A847F2AEB6B836286A601EDCC8B /* Foundation.framework */; };
-		856BB849A3981DC52E4DA6B220AF8DF0 /* ReplaceMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A5DADDCC9F7BAA0A591D50C3929D7AF /* ReplaceMe.swift */; };
 		85D178DFCA1BC67BBFB1188E34EC5B19 /* SwiftSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F2D8861A9068B0206C0FE04D0284FFE /* SwiftSupport.swift */; };
 		85D4DBD7E83768DAFD903EF915D1C1DA /* HooksPhase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8CEB693FEA83A7403E3B3612A986396 /* HooksPhase.swift */; };
 		86FB708FCFE6121A82BB09E5ADD84554 /* NMBExceptionCapture.h in Headers */ = {isa = PBXBuildFile; fileRef = 84A7791C9E45FD1F421C9ABB3BD267E6 /* NMBExceptionCapture.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -341,7 +340,6 @@
 		76AAFE915DA7E903F8DB76F8153760B1 /* BeAKindOf.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BeAKindOf.swift; path = Sources/Nimble/Matchers/BeAKindOf.swift; sourceTree = "<group>"; };
 		77D61B45315C6E9DC78F765934A28592 /* BLAMPaymentCVDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVDataSource.swift; sourceTree = "<group>"; };
 		77E08FE078177C1F3BC2A2997C3C43CC /* FontAwesome_swift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FontAwesome_swift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		7A5DADDCC9F7BAA0A591D50C3929D7AF /* ReplaceMe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ReplaceMe.swift; sourceTree = "<group>"; };
 		7AF0B7C16E5C05F15ACA6CFA0264276C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7B3D9D4F8578D7003EC0F44D06452C3E /* FBSnapshotTestController.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FBSnapshotTestController.h; path = FBSnapshotTestCase/FBSnapshotTestController.h; sourceTree = "<group>"; };
 		7C9B96FF1CB57E6BD612F531F8161C37 /* XCTestSuite+QuickTestSuiteBuilder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "XCTestSuite+QuickTestSuiteBuilder.m"; path = "Sources/Quick/XCTestSuite+QuickTestSuiteBuilder.m"; sourceTree = "<group>"; };
@@ -760,7 +758,6 @@
 				89736EE66DAD7A508DEE6C9CFFF2ACAC /* BLAMPaymentCVView.swift */,
 				3097827E3F9320AAB31F3B0969017FC4 /* BLAMPaymentItemModel.swift */,
 				E8A760A6B989060EFBBEEAA049E7BAFF /* BLAMPaymentItemProtocol.swift */,
-				7A5DADDCC9F7BAA0A591D50C3929D7AF /* ReplaceMe.swift */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -1395,7 +1392,6 @@
 				2880ACDE0ECFC3AD455714EC706639A2 /* BLAMPaymentCVView.swift in Sources */,
 				3ADA177711E51E338F247B9E2E877E40 /* BLAMPaymentItemModel.swift in Sources */,
 				795860C63A208C44E03295406DB68571 /* BLAMPaymentItemProtocol.swift in Sources */,
-				856BB849A3981DC52E4DA6B220AF8DF0 /* ReplaceMe.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

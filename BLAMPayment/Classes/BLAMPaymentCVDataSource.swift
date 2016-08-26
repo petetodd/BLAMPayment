@@ -59,6 +59,15 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         cell.lblText3.text = dataModel?.text3
         cell.lblText4.text = dataModel?.text4
         
+        // Highlight if the user subscribed to this option
+        if (dataModel?.isActive == "TRUE"){
+            cell.layer.borderWidth = 3
+            cell.layer.borderColor = UIColor.redColor().CGColor
+        }else{
+            cell.layer.borderWidth = 0
+
+        }
+        
         
         
         // Apple Pay button
