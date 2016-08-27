@@ -57,6 +57,19 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         self.presentViewController(alert, animated: true, completion: nil)
     }
     
+    func cancelSub(){
+        let message = "The user would like to cancel subscription.  You need to implement this!"
+        let alert = UIAlertController(title: "Cancel Subscription",
+                                      message: message,
+                                      preferredStyle: .Alert)
+        
+        let defaultAction = UIAlertAction(title: "OK", style: .Default, handler: nil)
+        alert.addAction(defaultAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+
+    }
+
+    
     //MARK: BLAM UI config
     /*
      Set custom colors.
@@ -85,7 +98,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         var valPrice = NSNumber(double: 0)
         var valCurrCode = "USD"
         
-        var valIsActive = "TRUE"
+        var valIsActive = "FALSE"
         var valDateRenew = NSDate()
 
         
@@ -106,7 +119,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         valTextPrice = "per month"
         valPrice = NSNumber(double: 25)
         valCurrCode = "USD"
-        valIsActive = "FALSE"
+        valIsActive = "TRUE"
         valDateRenew = NSDate()
 
         dictData = ["displayOrder": valDisplayOrder, "awesomeIcon": valAwesomeIcon, "strTitle": valTitle, "strDesc": valDesc, "text1": valText1, "text2": valText2, "text3": valText3 , "text4": valText4 , "textPrice": valTextPrice, "price": valPrice, "codeISO": valCurrCode, "isActive": valIsActive, "dateRenew": valDateRenew ]

@@ -14,6 +14,7 @@ private let reuseIdentifier = "BLAMPaymentCVCell"
 public protocol BLAMPaymentCVViewProtocol {
     func payWithApplePay(codeISO: String, amount: NSNumber)
     func payWithOtherPay(codeISO: String, amount: NSNumber)
+    func cancelSub()
 }
 
 public class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
@@ -95,13 +96,18 @@ public class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
     func payOther(codeISO: String, amount: NSNumber){
         delegate.payWithOtherPay(codeISO, amount: amount)
     }
+    
+    func cancelSub(){
+        delegate.cancelSub()
+    }
+
 
     // MARK: - DEMO Data
 
     
     func demoData(){
-        let item1 = BLAMPaymentItemModel.init(awesomeIcon: "fa-subway", strTitle: "Single user", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Single Asset", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE",  price : 0, codeISO : "USD", isActive: "TRUE", dateRenew: nil)
-        let item2 = BLAMPaymentItemModel.init(awesomeIcon: "fa-user", strTitle: "Team", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Team", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD", isActive: "FALSE", dateRenew: nil)
+        let item1 = BLAMPaymentItemModel.init(awesomeIcon: "fa-subway", strTitle: "Single user", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Single Asset", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE",  price : 0, codeISO : "USD", isActive: "FALSE", dateRenew: nil)
+        let item2 = BLAMPaymentItemModel.init(awesomeIcon: "fa-user", strTitle: "Team", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Team", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD", isActive: "TRUE", dateRenew: nil)
         let item3 = BLAMPaymentItemModel.init(awesomeIcon: "fa-home", strTitle: "Business", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Business", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD", isActive: "FALSE", dateRenew: nil)
 
         let item4 = BLAMPaymentItemModel.init(awesomeIcon: "fa-globe", strTitle: "Team", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Team", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD", isActive: "FALSE", dateRenew: nil)

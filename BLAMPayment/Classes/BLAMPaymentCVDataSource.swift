@@ -62,7 +62,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         // Highlight if the user subscribed to this option
         if (dataModel?.isActive == "TRUE"){
             cell.layer.borderWidth = 3
-            cell.layer.borderColor = UIColor.redColor().CGColor
+            cell.layer.borderColor = UIColor.greenColor().CGColor
         }else{
             cell.layer.borderWidth = 0
 
@@ -83,23 +83,58 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
             return cell
         }
         // Create a price label with amount and currency code (if supported)
-        cell.butOtherPayOptions.hidden = false
         cell.viewPayFrame.hidden = false
         
         let strCurrCode = currCodeHexFromISO((dataModel?.codeISO)!)
         let strLabelPrice = "\(strCurrCode)\(dataModel!.price) \(dataModel!.textPrice)"
         // Price
         cell.lblPrice.text = strLabelPrice
+        
+        
+        
+        
+        if (dataModel?.isActive == "TRUE"){
+            // This is the selected subscription - show a cancel option and renewal date
+            let butCancel = UIButton()
+            butCancel.setTitle("Cancel Subscription", forState: UIControlState.Normal)
+            butCancel.tag = 100
+            butCancel.addTarget(cell, action: #selector(cell.butCancelAction), forControlEvents: .TouchUpInside)
+            butCancel.frame = cell.viewPayFrame.frame
+            butCancel.backgroundColor = UIColor.redColor()
+            cell.addSubview(butCancel)
+            // Display the renewal date
+            let lblRenewDate = UILabel()
+            let rectFrame = CGRectMake(20, cell.butOtherPayOptions.frame.origin.y, cell.frame.width, cell.butOtherPayOptions.frame.height)
+            lblRenewDate.frame = rectFrame
+
+            cell.butOtherPayOptions.hidden = true
+            
+            let dateFormatter = NSDateFormatter()
+            dateFormatter.dateFormat = "dd MMMM"
+            let txtDate = dateFormatter.stringFromDate((dataModel?.dateRenew!)!)
+            lblRenewDate.text = "Next payment: \(txtDate)"
+            cell.addSubview(lblRenewDate)
+
+
+            
+            
+        }else{ // Show pay options
+            cell.butOtherPayOptions.hidden = false
+
+            let butApplePay = PKPaymentButton()
+            butApplePay.tag = 100
+            butApplePay.addTarget(cell, action: #selector(cell.butApplePAyAction), forControlEvents: .TouchUpInside)
+            butApplePay.frame = cell.viewPayFrame.frame
+            cell.addSubview(butApplePay)
+            
+        }
+        
+
 
 
         
         
-        let butApplePay = PKPaymentButton()
-        butApplePay.tag = 100
-        butApplePay.addTarget(cell, action: #selector(cell.butApplePAyAction), forControlEvents: .TouchUpInside)
-        butApplePay.frame = cell.viewPayFrame.frame
-        cell.addSubview(butApplePay)
-
+      
         
         //let item1 = BLAMPaymentItemModel.init(awesomeIcon: "fa-subway", strTitle: "Single user", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Single Asset", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE")
         return cell

@@ -12,6 +12,8 @@ import PassKit
 protocol BLAMPaymentCVCellProtocol {
     func payApple(codeISO: String, amount: NSNumber)
     func payOther(codeISO: String, amount: NSNumber)
+    func cancelSub()
+
 }
 
 class BLAMPaymentCVCell: UICollectionViewCell {
@@ -56,5 +58,9 @@ class BLAMPaymentCVCell: UICollectionViewCell {
     func butApplePAyAction(){
         delegate.payApple(model.codeISO, amount: model.price)
 
+    }
+    
+    func butCancelAction(){
+        delegate.cancelSub()
     }
 }
