@@ -10,8 +10,8 @@ import UIKit
 import PassKit
 
 protocol BLAMPaymentCVCellProtocol {
-    func payApple(codeISO: String, amount: NSNumber)
-    func payOther(codeISO: String, amount: NSNumber)
+    func payApple(subRef: String, codeISO: String, amount: NSNumber)
+    func payOther(subRef: String, codeISO: String, amount: NSNumber)
     func cancelSub()
 
 }
@@ -52,11 +52,11 @@ class BLAMPaymentCVCell: UICollectionViewCell {
     }
 
     @IBAction func butOtherAction(sender: AnyObject) {
-        delegate.payOther(model.codeISO, amount: model.price)
+        delegate.payOther(model.subRef, codeISO: model.codeISO, amount: model.price)
     }
     
     func butApplePAyAction(){
-        delegate.payApple(model.codeISO, amount: model.price)
+        delegate.payApple(model.subRef, codeISO: model.codeISO, amount: model.price)
 
     }
     

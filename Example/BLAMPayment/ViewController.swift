@@ -33,9 +33,9 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
     //MARK: - BLAMPaymentCVView
     
     //MARK: BLAMPaymentCVViewProtocol
-    
-    func payWithApplePay(codeISO: String, amount: NSNumber){
-        let message = "The user would like to enroll using apple pay at a cost of \(codeISO)\(amount).  You need to implement this!"
+
+    func payWithApplePay(subRef: String, codeISO: String, amount: NSNumber){
+        let message = "The user would like to enroll for \(subRef) using apple pay at a cost of \(codeISO)\(amount).  You need to implement this!"
         let alert = UIAlertController(title: "Pay with apple pay",
                                       message: message,
                                       preferredStyle: .Alert)
@@ -46,8 +46,8 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
 
         
     }
-    func payWithOtherPay(codeISO: String, amount: NSNumber){
-        let message = "The user would like to enroll using another method of payment at a cost of \(codeISO)\(amount).  You need to implement this!"
+    func payWithOtherPay(subRef: String, codeISO: String, amount: NSNumber){
+        let message = "The user would like to enroll for \(subRef) using another method of payment at a cost of \(codeISO)\(amount).  You need to implement this!"
         let alert = UIAlertController(title: "Pay with Other Payment method",
                                       message: message,
                                       preferredStyle: .Alert)
@@ -85,6 +85,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         // Dictionary for display Item
         // Item 1 - a single user subscription
         var dictData = Dictionary <String,AnyObject>()
+        var subRef = "SINGLE"
         var valDisplayOrder = "1"
         var valAwesomeIcon = "fa-home"
         var valTitle = "Single user"
@@ -103,11 +104,12 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
 
         
         
-        dictData = ["displayOrder": valDisplayOrder, "awesomeIcon": valAwesomeIcon, "strTitle": valTitle, "strDesc": valDesc, "text1": valText1, "text2": valText2, "text3": valText3 , "text4": valText4 , "textPrice": valTextPrice, "price": valPrice, "codeISO": valCurrCode, "isActive": valIsActive, "dateRenew": valDateRenew ]
+        dictData = ["displayOrder": valDisplayOrder, "awesomeIcon": valAwesomeIcon, "strTitle": valTitle, "strDesc": valDesc, "text1": valText1, "text2": valText2, "text3": valText3 , "text4": valText4 , "textPrice": valTextPrice, "price": valPrice, "codeISO": valCurrCode, "subRef": subRef, "isActive": valIsActive, "dateRenew": valDateRenew ]
         viewBLAMPayment.addDisplayItem(dictData)
         
         // Item 2 - a micro team subscription
         dictData.removeAll()
+        subRef = "MICRO"
         valDisplayOrder = "2"
         valAwesomeIcon = "fa-users"
         valTitle = "Micro"
@@ -122,13 +124,14 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         valIsActive = "TRUE"
         valDateRenew = NSDate()
 
-        dictData = ["displayOrder": valDisplayOrder, "awesomeIcon": valAwesomeIcon, "strTitle": valTitle, "strDesc": valDesc, "text1": valText1, "text2": valText2, "text3": valText3 , "text4": valText4 , "textPrice": valTextPrice, "price": valPrice, "codeISO": valCurrCode, "isActive": valIsActive, "dateRenew": valDateRenew ]
+        dictData = ["displayOrder": valDisplayOrder, "awesomeIcon": valAwesomeIcon, "strTitle": valTitle, "strDesc": valDesc, "text1": valText1, "text2": valText2, "text3": valText3 , "text4": valText4 , "textPrice": valTextPrice, "price": valPrice, "codeISO": valCurrCode, "subRef": subRef, "isActive": valIsActive, "dateRenew": valDateRenew ]
 
         viewBLAMPayment.addDisplayItem(dictData)
         
         // Item 3 - a alrge team subscription
         dictData.removeAll()
         valDisplayOrder = "3"
+        subRef = "TEAM"
         valAwesomeIcon = "fa-user-plus"
         valTitle = "Team"
         valDesc = "Description about features for the professional team product."
@@ -142,12 +145,13 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         valIsActive = "FALSE"
         valDateRenew = NSDate()
 
-        dictData = ["displayOrder": valDisplayOrder, "awesomeIcon": valAwesomeIcon, "strTitle": valTitle, "strDesc": valDesc, "text1": valText1, "text2": valText2, "text3": valText3 , "text4": valText4 , "textPrice": valTextPrice, "price": valPrice, "codeISO": valCurrCode, "isActive": valIsActive, "dateRenew": valDateRenew ]
+        dictData = ["displayOrder": valDisplayOrder, "awesomeIcon": valAwesomeIcon, "strTitle": valTitle, "strDesc": valDesc, "text1": valText1, "text2": valText2, "text3": valText3 , "text4": valText4 , "textPrice": valTextPrice, "price": valPrice, "codeISO": valCurrCode, "subRef": subRef, "isActive": valIsActive, "dateRenew": valDateRenew ]
 
         viewBLAMPayment.addDisplayItem(dictData)
         
         // Item 4 - a large team subscription
         dictData.removeAll()
+        subRef = "CORPORATE"
         valDisplayOrder = "4"
         valAwesomeIcon = "fa-bank"
         valTitle = "Corporate"
@@ -162,12 +166,13 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         valIsActive = "FALSE"
         valDateRenew = NSDate()
 
-        dictData = ["displayOrder": valDisplayOrder, "awesomeIcon": valAwesomeIcon, "strTitle": valTitle, "strDesc": valDesc, "text1": valText1, "text2": valText2, "text3": valText3 , "text4": valText4 , "textPrice": valTextPrice, "price": valPrice, "codeISO": valCurrCode, "isActive": valIsActive, "dateRenew": valDateRenew ]
+        dictData = ["displayOrder": valDisplayOrder, "awesomeIcon": valAwesomeIcon, "strTitle": valTitle, "strDesc": valDesc, "text1": valText1, "text2": valText2, "text3": valText3 , "text4": valText4 , "textPrice": valTextPrice, "price": valPrice, "codeISO": valCurrCode, "subRef": subRef, "isActive": valIsActive, "dateRenew": valDateRenew ]
 
         viewBLAMPayment.addDisplayItem(dictData)
         
         // Item 5 - a global team subscription
         dictData.removeAll()
+        subRef = "ENTERPRISE"
         valDisplayOrder = "5"
         valAwesomeIcon = "fa-globe"
         valTitle = "Enterprise"
@@ -182,7 +187,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         valIsActive = "FALSE"
         valDateRenew = NSDate()
 
-        dictData = ["displayOrder": valDisplayOrder, "awesomeIcon": valAwesomeIcon, "strTitle": valTitle, "strDesc": valDesc, "text1": valText1, "text2": valText2, "text3": valText3 , "text4": valText4 , "textPrice": valTextPrice, "price": valPrice, "codeISO": valCurrCode, "isActive": valIsActive, "dateRenew": valDateRenew]
+        dictData = ["displayOrder": valDisplayOrder, "awesomeIcon": valAwesomeIcon, "strTitle": valTitle, "strDesc": valDesc, "text1": valText1, "text2": valText2, "text3": valText3 , "text4": valText4 , "textPrice": valTextPrice, "price": valPrice, "codeISO": valCurrCode, "subRef": subRef, "isActive": valIsActive, "dateRenew": valDateRenew]
 
 
         viewBLAMPayment.addDisplayItem(dictData)

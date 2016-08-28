@@ -20,10 +20,11 @@ class BLAMPaymentItemModel: BLAMPaymentItemProtocol {
     var textPrice: String
     var price: NSNumber
     var codeISO: String
+    var subRef: String
     var isActive: String
     var dateRenew: NSDate?
     
-    init(awesomeIcon: String, strTitle: String, strDesc: String, text1: String, text2: String, text3: String, text4: String, textPrice: String, price : NSNumber, codeISO : String, isActive : String, dateRenew : NSDate?){
+    init(awesomeIcon: String, strTitle: String, strDesc: String, text1: String, text2: String, text3: String, text4: String, textPrice: String, price : NSNumber, codeISO : String , subRef : String, isActive : String, dateRenew : NSDate?){
         
         self.awesomeIcon = awesomeIcon
         self.strTitle = strTitle
@@ -34,6 +35,7 @@ class BLAMPaymentItemModel: BLAMPaymentItemProtocol {
         self.text4 = text4
         self.textPrice = textPrice
         self.codeISO = codeISO
+        self.subRef = subRef
         self.price = price
         self.isActive = isActive
         if dateRenew != nil{

@@ -12,8 +12,8 @@ private let reuseIdentifier = "BLAMPaymentCVCell"
 
 
 public protocol BLAMPaymentCVViewProtocol {
-    func payWithApplePay(codeISO: String, amount: NSNumber)
-    func payWithOtherPay(codeISO: String, amount: NSNumber)
+    func payWithApplePay(subRef: String, codeISO: String, amount: NSNumber)
+    func payWithOtherPay(subRef: String, codeISO: String, amount: NSNumber)
     func cancelSub()
 }
 
@@ -77,7 +77,7 @@ public class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
     }
     
     public func addDisplayItem(inDict : Dictionary <String, AnyObject>){
-        let itemModel = BLAMPaymentItemModel.init(awesomeIcon: inDict["awesomeIcon"]! as! String, strTitle: inDict["strTitle"]! as! String, strDesc: inDict["strDesc"]! as! String, text1: inDict["text1"]! as! String, text2: inDict["text2"]! as! String, text3: inDict["text3"]! as! String, text4: inDict["text4"]! as! String, textPrice: inDict["textPrice"]! as! String, price : inDict["price"]! as! NSNumber, codeISO : inDict["codeISO"]! as! String, isActive :  inDict["isActive"]! as! String, dateRenew : inDict["dateRenew"]! as? NSDate)
+        let itemModel = BLAMPaymentItemModel.init(awesomeIcon: inDict["awesomeIcon"]! as! String, strTitle: inDict["strTitle"]! as! String, strDesc: inDict["strDesc"]! as! String, text1: inDict["text1"]! as! String, text2: inDict["text2"]! as! String, text3: inDict["text3"]! as! String, text4: inDict["text4"]! as! String, textPrice: inDict["textPrice"]! as! String, price : inDict["price"]! as! NSNumber, codeISO : inDict["codeISO"]! as! String, subRef : inDict["subRef"]! as! String, isActive :  inDict["isActive"]! as! String, dateRenew : inDict["dateRenew"]! as? NSDate)
         // dictData = [inDict["valDisplayOrder"]!: itemModel]
         if dictData == nil{
             dictData = [inDict["displayOrder"]! as! String: itemModel]
@@ -89,12 +89,12 @@ public class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
     
     // MARK: - BLAMPaymentCVCellProtocol
 
-    func payApple(codeISO: String, amount: NSNumber){
-        delegate.payWithApplePay(codeISO, amount: amount)
+    func payApple(subRef: String, codeISO: String, amount: NSNumber){
+        delegate.payWithApplePay(subRef, codeISO: codeISO, amount: amount)
     }
     
-    func payOther(codeISO: String, amount: NSNumber){
-        delegate.payWithOtherPay(codeISO, amount: amount)
+    func payOther(subRef: String, codeISO: String, amount: NSNumber){
+        delegate.payWithOtherPay(subRef, codeISO: codeISO, amount: amount)
     }
     
     func cancelSub(){
@@ -108,13 +108,13 @@ public class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
     func demoData(){
         let valDateRenew = NSDate()
 
-        let item1 = BLAMPaymentItemModel.init(awesomeIcon: "fa-subway", strTitle: "Single user", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Single Asset", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE",  price : 0, codeISO : "USD", isActive: "FALSE", dateRenew: valDateRenew)
-        let item2 = BLAMPaymentItemModel.init(awesomeIcon: "fa-user", strTitle: "Team", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Team", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD", isActive: "TRUE", dateRenew: valDateRenew)
-        let item3 = BLAMPaymentItemModel.init(awesomeIcon: "fa-home", strTitle: "Business", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Business", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD", isActive: "FALSE", dateRenew: valDateRenew)
+        let item1 = BLAMPaymentItemModel.init(awesomeIcon: "fa-subway", strTitle: "Single user", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Single Asset", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE",  price : 0, codeISO : "USD", subRef : "SINGLE", isActive: "FALSE", dateRenew: valDateRenew)
+        let item2 = BLAMPaymentItemModel.init(awesomeIcon: "fa-user", strTitle: "Team", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Team", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD",  subRef : "TEAM", isActive: "TRUE", dateRenew: valDateRenew)
+        let item3 = BLAMPaymentItemModel.init(awesomeIcon: "fa-home", strTitle: "Business", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Business", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD",  subRef : "BUSINESS", isActive: "FALSE", dateRenew: valDateRenew)
 
-        let item4 = BLAMPaymentItemModel.init(awesomeIcon: "fa-globe", strTitle: "Team", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Team", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD", isActive: "FALSE", dateRenew: valDateRenew)
+        let item4 = BLAMPaymentItemModel.init(awesomeIcon: "fa-globe", strTitle: "Team", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Team", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD",  subRef : "TEAM", isActive: "FALSE", dateRenew: valDateRenew)
 
-        let item5 = BLAMPaymentItemModel.init(awesomeIcon: "fa-lightbulb-o", strTitle: "Enterprise", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Enterprise", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD", isActive: "FALSE", dateRenew: valDateRenew)
+        let item5 = BLAMPaymentItemModel.init(awesomeIcon: "fa-lightbulb-o", strTitle: "Enterprise", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Enterprise", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD",  subRef : "ENTERPRISE", isActive: "FALSE", dateRenew: valDateRenew)
 
         dictData = ["item1": item1, "item2": item2, "item3": item3, "item4": item4, "item5": item5 ]
 
