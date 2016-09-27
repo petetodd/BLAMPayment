@@ -53,8 +53,8 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
 
         let fontURL = podBundle.url(forResource: "fontawesome-webfont", withExtension: "ttf")
         CTFontManagerRegisterFontsForURL(fontURL as! CFURL, CTFontManagerScope.process, nil)
-        var fontAwesome = UIFont(name: "FontAwesome", size: 60)
-        var attrs = [NSFontAttributeName : fontAwesome!,
+        let fontAwesome = UIFont(name: "FontAwesome", size: 60)
+        let attrs = [NSFontAttributeName : fontAwesome!,
                      NSForegroundColorAttributeName : UIColor.red,
                      NSBaselineOffsetAttributeName : 0.0] as AnyObject
         
