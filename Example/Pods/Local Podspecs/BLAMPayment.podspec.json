@@ -22,7 +22,7 @@
   "source_files": "BLAMPayment/Classes/**/*",
   "resource_bundles": {
     "BLAMPayment": [
-      "BLAMPayment/Classes/**/*.{storyboard,xib}"
+      "BLAMPayment/Classes/**/*.{storyboard,xib,ttf}"
     ]
   }
 }

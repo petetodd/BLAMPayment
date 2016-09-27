@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  BLAMPayment: 89af1b5e6aff42072499ebdf91d21b0b02f9a86f
+  BLAMPayment: a1204e06ad6c03d6fa4e757eb6c2c056ecf65fea
 
 PODFILE CHECKSUM: f9b5cf8cbe876cca842ed38c30b3e22faad1c25f
 

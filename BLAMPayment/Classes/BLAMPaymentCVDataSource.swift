@@ -44,10 +44,10 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         cell.model = dataModel
         cell.delegate = callingView
        // let str1 = "fa-github"
-       // let strIcon = String.fontAwesomeIconWithCode(dataModel!.awesomeIcon)
         
-     //   cell.lblIcon.font =  UIFont.fontAwesomeOfSize(60)
-    //    cell.lblIcon.text = strIcon
+     //   cell.lblIcon.font =  UIFont(name: "FontAwesome", size: 60)
+        cell.lblIcon.text = "\u{f073}"
+
         cell.lblTitle.text = dataModel?.strTitle
         cell.tvDesc.text = dataModel?.strDesc
         cell.tvDesc.textAlignment = NSTextAlignment.center

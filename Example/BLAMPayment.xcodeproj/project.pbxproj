@@ -483,7 +483,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6FA2C0037E27B99598D79051 /* Pods-BLAMPayment_Example.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BLAMPayment/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
@@ -500,7 +500,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 10FB6E965700CEFF69F535AE /* Pods-BLAMPayment_Example.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = "$(inherited)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = BLAMPayment/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;

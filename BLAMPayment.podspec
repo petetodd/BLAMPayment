@@ -32,7 +32,7 @@ A configurable subscription selection interface to enable a user to view the fea
 
   s.source_files = 'BLAMPayment/Classes/**/*'
     s.resource_bundles = {
-'BLAMPayment' => ['BLAMPayment/Classes/**/*.{storyboard,xib}']
+'BLAMPayment' => ['BLAMPayment/Classes/**/*.{storyboard,xib}', 'BLAMPayment/Assets/Fonts/*.{ttf}']
 }
 
   # s.resource_bundles = {

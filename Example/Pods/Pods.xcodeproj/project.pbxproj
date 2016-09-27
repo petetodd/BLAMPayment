@@ -7,104 +7,91 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0C30670C1A7EC4C35BA5E20AA0A702CC /* BLAMPayment-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C53E47755E2BCCC04DC27A2E376BEF5A /* BLAMPayment-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		1055092840E546F3D3CDE6BDA729DFA6 /* Pods-BLAMPayment_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 54A3E8854118F05D3E167E8D1758519D /* Pods-BLAMPayment_Example-dummy.m */; };
-		1817876D7E004A109253BA113DC794D4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		2097D4AFC7541A34C9751F321F67BD82 /* BLAMPayment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D5F153EFF4F2D621DDE731DA6B9C64 /* BLAMPayment-dummy.m */; };
-		20D8A58051408D47F2EB43D2037D6BF7 /* BLAMPaymentCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6AEAA22097D07B3DB4F9FF2AD716DA /* BLAMPaymentCVCell.swift */; };
-		2AAB387B30A0E972ABC1ED4DD0FEDE89 /* BLAMPaymentCVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47964BE753E1041F40C2FE79CE7B28A5 /* BLAMPaymentCVDataSource.swift */; };
-		2ABC6BF13477955E5E9C3D0B6A6FCA85 /* BLAMPaymentCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E9B415598CF577BFBC9CCF669EFE072A /* BLAMPaymentCVCell.xib */; };
-		2B586DA542AAA6DD215868B6B511A0C0 /* BLAMPaymentCVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 438C3DC26D1EAFF7AEF5AAB849AB0349 /* BLAMPaymentCVView.swift */; };
+		236EA0A9992891D69EE4A413D3EB1497 /* BLAMPaymentCVCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = 56D6043FA179D41A3DEECCC9680D23BC /* BLAMPaymentCVCell.xib */; };
+		2BBD95992A72214E12FD8A29D0F2178B /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
+		2D380CF339F6D6E38F1723EE0F702C0D /* BLAMPaymentCVLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C997493393ED36C9DF5686F19A14C0C /* BLAMPaymentCVLayout.swift */; };
+		4D9483055288098420AC02CE6FDCA0A1 /* BLAMPaymentItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2DB5F1EEAF63DBB1A9DB7315C4AE0443 /* BLAMPaymentItemProtocol.swift */; };
 		5040CE46DF29229D54E94160151A1C11 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		61FC41E1CABDE05863C17E0C408DA623 /* BLAMPayment.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C1AD8316661CFB65703C53873E14B5DD /* BLAMPayment.bundle */; };
-		6449EC24BCD255217E0EEEFFD5B93C92 /* BLAMPaymentCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18D7574E2BB048E0D181F4BE2D9B4785 /* BLAMPaymentCVC.swift */; };
-		73B5DE345012A0456E949531D02D04F5 /* BLAMPayment-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = C53E47755E2BCCC04DC27A2E376BEF5A /* BLAMPayment-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		544283019E0C8B9B94437AF3219E43AB /* BLAMPaymentItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8B65AF956C49153438A580673F49F5 /* BLAMPaymentItemModel.swift */; };
+		57A22DBF41B05508B7BB33362ACA7566 /* BLAMPaymentCVDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E8D325033D280A644E97A0C7A25F203 /* BLAMPaymentCVDataSource.swift */; };
 		86A45201837A21C695EF336511E08C86 /* Pods-BLAMPayment_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4C1AAC96AE6CC3B498193853D135882E /* Pods-BLAMPayment_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8980D32DC581D039280FB2F1B68F577B /* BLAMPaymentItemProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1ABE33D35DB5300C74F0A5E81418AD7E /* BLAMPaymentItemProtocol.swift */; };
-		BAB0CF951ED6DCC1A689FDC66F86B24F /* BLAMPaymentCVCell.xib in Sources */ = {isa = PBXBuildFile; fileRef = E9B415598CF577BFBC9CCF669EFE072A /* BLAMPaymentCVCell.xib */; };
+		8AC41ECF88F6E51370F368FEAF449DDB /* BLAMPaymentCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4560215E7E904727E012C72C019F8 /* BLAMPaymentCVCell.swift */; };
+		A4140C87AA7F9FD6D444ACD4FE4A9FAD /* BLAMPayment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D5F153EFF4F2D621DDE731DA6B9C64 /* BLAMPayment-dummy.m */; };
+		AEEE97C853DCC393586C0B8D273C3999 /* BLAMPaymentCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D6043FA179D41A3DEECCC9680D23BC /* BLAMPaymentCVCell.xib */; };
+		C42E3166F4292B44F8C5F1973C70A8E9 /* BLAMPaymentCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9402648D8E62640D8D376BB3D5EED /* BLAMPaymentCVC.swift */; };
 		CAE6DACA85BA793B0AAC4FB76CDAF01F /* Pods-BLAMPayment_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 177ACC95AD93345EE767E1D3074F41BF /* Pods-BLAMPayment_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		DE95E61B105A22DA51DB04BD15818EA0 /* BLAMPaymentItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520DA2C8533C8027AF905B1CD90B6580 /* BLAMPaymentItemModel.swift */; };
+		D09950FF1D9AAD650027F277 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D09950FE1D9AAD650027F277 /* fontawesome-webfont.ttf */; };
+		D8ACCAC8F9517B2B9FBA2D74CD7DB855 /* BLAMPaymentCVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85204F97882A9EBAC7230253606651BF /* BLAMPaymentCVView.swift */; };
+		DC580F3A5BF86B7092226B7FC3B75E88 /* BLAMPayment.bundle in Resources */ = {isa = PBXBuildFile; fileRef = C1AD8316661CFB65703C53873E14B5DD /* BLAMPayment.bundle */; };
 		EC44317B0FE420C9BE4A7D63E50A1E0D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */; };
-		F22E216451DAFA8A76285E6EDBA0826F /* BLAMPaymentCVLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94BAF3DCE67E52DDEDAD4AF350643B0A /* BLAMPaymentCVLayout.swift */; };
 		FE710DFC8F34632D66A02EE3D3C47F43 /* Pods-BLAMPayment_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BF28D04C2CE95B8EB787156784850E1A /* Pods-BLAMPayment_Tests-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		61F93035038CCF705D8DDB0CABB5A692 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 232E6FA8431D128C76F93682B9FBB5E3;
+			remoteInfo = "BLAMPayment-BLAMPayment";
+		};
 		C6C806CB7D0296277A99A55EC8CDCAF8 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F1DF295CF7C053051C89682027829F3A;
+			remoteGlobalIDString = E3E7395D05C31F9AC0A0F95876E1B0CD;
 			remoteInfo = BLAMPayment;
-		};
-		CD26BE0313631BE806DD6A3CD687C89E /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E73BF30A7ACE064CA8DBAC6017E4EA33;
-			remoteInfo = "BLAMPayment-BLAMPayment";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		00A833FCB704BF72564BC7E2EB3BBEF7 /* Pods-BLAMPayment_Tests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLAMPayment_Tests-frameworks.sh"; sourceTree = "<group>"; };
-		0C6AEAA22097D07B3DB4F9FF2AD716DA /* BLAMPaymentCVCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVCell.swift; sourceTree = "<group>"; };
+		0C997493393ED36C9DF5686F19A14C0C /* BLAMPaymentCVLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVLayout.swift; sourceTree = "<group>"; };
 		177ACC95AD93345EE767E1D3074F41BF /* Pods-BLAMPayment_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLAMPayment_Example-umbrella.h"; sourceTree = "<group>"; };
-		18D7574E2BB048E0D181F4BE2D9B4785 /* BLAMPaymentCVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVC.swift; sourceTree = "<group>"; };
-		1ABE33D35DB5300C74F0A5E81418AD7E /* BLAMPaymentItemProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentItemProtocol.swift; sourceTree = "<group>"; };
 		1EB132019970D6FFC64139AA8F680B45 /* Pods-BLAMPayment_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLAMPayment_Example.release.xcconfig"; sourceTree = "<group>"; };
 		275C1C07084B2267E346C444A5891E97 /* Pods-BLAMPayment_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLAMPayment_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
 		2901FB776EBCC8439F63365DE7E9138E /* Pods-BLAMPayment_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BLAMPayment_Tests.modulemap"; sourceTree = "<group>"; };
+		2DB5F1EEAF63DBB1A9DB7315C4AE0443 /* BLAMPaymentItemProtocol.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentItemProtocol.swift; sourceTree = "<group>"; };
 		30D5F153EFF4F2D621DDE731DA6B9C64 /* BLAMPayment-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "BLAMPayment-dummy.m"; sourceTree = "<group>"; };
 		367A92D8AB80A267B12A77BDC7E780CD /* BLAMPayment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BLAMPayment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B04C3ABCC260910EF7FD6362474E7B6 /* Pods-BLAMPayment_Example-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLAMPayment_Example-resources.sh"; sourceTree = "<group>"; };
-		438C3DC26D1EAFF7AEF5AAB849AB0349 /* BLAMPaymentCVView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVView.swift; sourceTree = "<group>"; };
+		3E8D325033D280A644E97A0C7A25F203 /* BLAMPaymentCVDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVDataSource.swift; sourceTree = "<group>"; };
 		43C676C69B95A5B722EB8338FD38A621 /* Pods-BLAMPayment_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLAMPayment_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		47964BE753E1041F40C2FE79CE7B28A5 /* BLAMPaymentCVDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVDataSource.swift; sourceTree = "<group>"; };
 		48E90ACDCF89A9B64BB7391DF53AA039 /* Pods-BLAMPayment_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLAMPayment_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		4C1AAC96AE6CC3B498193853D135882E /* Pods-BLAMPayment_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-BLAMPayment_Tests-umbrella.h"; sourceTree = "<group>"; };
 		50FC2987EC7B182B64EA9E64C7EFEB45 /* ResourceBundle-BLAMPayment-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResourceBundle-BLAMPayment-Info.plist"; sourceTree = "<group>"; };
-		520DA2C8533C8027AF905B1CD90B6580 /* BLAMPaymentItemModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentItemModel.swift; sourceTree = "<group>"; };
 		54A3E8854118F05D3E167E8D1758519D /* Pods-BLAMPayment_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLAMPayment_Example-dummy.m"; sourceTree = "<group>"; };
+		56D6043FA179D41A3DEECCC9680D23BC /* BLAMPaymentCVCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = BLAMPaymentCVCell.xib; sourceTree = "<group>"; };
 		57C0D926C774E8CEB05A99B2BBE14177 /* BLAMPayment.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = BLAMPayment.modulemap; sourceTree = "<group>"; };
 		59E7A52F75D81C45CB27E4A6FF643443 /* Pods_BLAMPayment_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLAMPayment_Example.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E324896E54F6C55C713F5E7C90335AD /* Pods-BLAMPayment_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLAMPayment_Example-frameworks.sh"; sourceTree = "<group>"; };
 		621C3BD9EE163DDDC9F28A67AE52C9A5 /* BLAMPayment-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLAMPayment-prefix.pch"; sourceTree = "<group>"; };
+		6B8B65AF956C49153438A580673F49F5 /* BLAMPaymentItemModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentItemModel.swift; sourceTree = "<group>"; };
 		6BD59B467D18BB11B2091917F559FA50 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6D27A7F3994DD7C8BC133C860DAB7D11 /* Pods-BLAMPayment_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLAMPayment_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		7AF0B7C16E5C05F15ACA6CFA0264276C /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7D42DA1343BA91999E5377E1F90606DC /* Pods-BLAMPayment_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-BLAMPayment_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
+		85204F97882A9EBAC7230253606651BF /* BLAMPaymentCVView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVView.swift; sourceTree = "<group>"; };
+		8AD4560215E7E904727E012C72C019F8 /* BLAMPaymentCVCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVCell.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		94BAF3DCE67E52DDEDAD4AF350643B0A /* BLAMPaymentCVLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVLayout.swift; sourceTree = "<group>"; };
+		BEA9402648D8E62640D8D376BB3D5EED /* BLAMPaymentCVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVC.swift; sourceTree = "<group>"; };
 		BF28D04C2CE95B8EB787156784850E1A /* Pods-BLAMPayment_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLAMPayment_Tests-dummy.m"; sourceTree = "<group>"; };
 		C18382915C308FEE6C7DB2B1E82BB461 /* Pods-BLAMPayment_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BLAMPayment_Example.modulemap"; sourceTree = "<group>"; };
 		C1AD8316661CFB65703C53873E14B5DD /* BLAMPayment.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLAMPayment.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
 		C27ABDC062A19B2A3EDB52BBCFA0B223 /* Pods-BLAMPayment_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-BLAMPayment_Example-acknowledgements.plist"; sourceTree = "<group>"; };
 		C53E47755E2BCCC04DC27A2E376BEF5A /* BLAMPayment-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "BLAMPayment-umbrella.h"; sourceTree = "<group>"; };
 		CEC22C73C1608DFA5D5D78BDCB218219 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		D09950FE1D9AAD650027F277 /* fontawesome-webfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "fontawesome-webfont.ttf"; path = "Assets/Fonts/fontawesome-webfont.ttf"; sourceTree = "<group>"; };
 		D53667E63E6EF959664C8A9FF1B14C65 /* BLAMPayment.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = BLAMPayment.xcconfig; sourceTree = "<group>"; };
 		DD26DBF87B95A4F4E8E903171AFCEA9A /* Pods_BLAMPayment_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BLAMPayment_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD573E86D2479E18E647E8A60BEF7469 /* Pods-BLAMPayment_Tests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-BLAMPayment_Tests-resources.sh"; sourceTree = "<group>"; };
 		E7EDF22A982136370546BBE0F79187A4 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		E9B415598CF577BFBC9CCF669EFE072A /* BLAMPaymentCVCell.xib */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = file.xib; path = BLAMPaymentCVCell.xib; sourceTree = "<group>"; };
 		EAD3AB1295FBCEEA63FB93DCB5E33070 /* Pods-BLAMPayment_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-BLAMPayment_Tests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		099EA8BF3784F72E07E150B6ED2AFF6D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		1EE96C35C646EAD78B58037439E2872F /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				1817876D7E004A109253BA113DC794D4 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		21409046B0F5424319BC49D21A417611 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -113,11 +100,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		7ADA5EA50E16468F9B4088B312EA289A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BBD95992A72214E12FD8A29D0F2178B /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		82F858E417CAD9C543A2B442EA4B604F /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				5040CE46DF29229D54E94160151A1C11 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D5494047F57119C89C4E917E857AEA16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,7 +145,7 @@
 		2086A83931C61A15E4EE2B7134E9F827 /* BLAMPayment */ = {
 			isa = PBXGroup;
 			children = (
-				A6BD44789B5BDB66B44BC020B92AF6EE /* BLAMPayment */,
+				4EC289A56217E96BF4914F5174E8A821 /* BLAMPayment */,
 				B1A1B1E65A7374697B0D7404B8C7C346 /* Resources */,
 				66E8C2AEEBEE75DDE45B4471578DEBCF /* Support Files */,
 			);
@@ -185,6 +187,30 @@
 			name = "Development Pods";
 			sourceTree = "<group>";
 		};
+		4BD4FD332F7AEE39B58BC824705AC4EE /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				BEA9402648D8E62640D8D376BB3D5EED /* BLAMPaymentCVC.swift */,
+				8AD4560215E7E904727E012C72C019F8 /* BLAMPaymentCVCell.swift */,
+				56D6043FA179D41A3DEECCC9680D23BC /* BLAMPaymentCVCell.xib */,
+				3E8D325033D280A644E97A0C7A25F203 /* BLAMPaymentCVDataSource.swift */,
+				0C997493393ED36C9DF5686F19A14C0C /* BLAMPaymentCVLayout.swift */,
+				85204F97882A9EBAC7230253606651BF /* BLAMPaymentCVView.swift */,
+				6B8B65AF956C49153438A580673F49F5 /* BLAMPaymentItemModel.swift */,
+				2DB5F1EEAF63DBB1A9DB7315C4AE0443 /* BLAMPaymentItemProtocol.swift */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		4EC289A56217E96BF4914F5174E8A821 /* BLAMPayment */ = {
+			isa = PBXGroup;
+			children = (
+				D09950FC1D9AAD3E0027F277 /* Assets */,
+				4BD4FD332F7AEE39B58BC824705AC4EE /* Classes */,
+			);
+			path = BLAMPayment;
+			sourceTree = "<group>";
+		};
 		66E8C2AEEBEE75DDE45B4471578DEBCF /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -215,14 +241,6 @@
 			isa = PBXGroup;
 			children = (
 				0BFD9D7849F367DB69A7C505A79EE372 /* Classes */,
-			);
-			path = BLAMPayment;
-			sourceTree = "<group>";
-		};
-		A6BD44789B5BDB66B44BC020B92AF6EE /* BLAMPayment */ = {
-			isa = PBXGroup;
-			children = (
-				E92AAD474888F97F9D5B22E3BDB89500 /* Classes */,
 			);
 			path = BLAMPayment;
 			sourceTree = "<group>";
@@ -261,19 +279,20 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		E92AAD474888F97F9D5B22E3BDB89500 /* Classes */ = {
+		D09950FC1D9AAD3E0027F277 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				18D7574E2BB048E0D181F4BE2D9B4785 /* BLAMPaymentCVC.swift */,
-				0C6AEAA22097D07B3DB4F9FF2AD716DA /* BLAMPaymentCVCell.swift */,
-				E9B415598CF577BFBC9CCF669EFE072A /* BLAMPaymentCVCell.xib */,
-				47964BE753E1041F40C2FE79CE7B28A5 /* BLAMPaymentCVDataSource.swift */,
-				94BAF3DCE67E52DDEDAD4AF350643B0A /* BLAMPaymentCVLayout.swift */,
-				438C3DC26D1EAFF7AEF5AAB849AB0349 /* BLAMPaymentCVView.swift */,
-				520DA2C8533C8027AF905B1CD90B6580 /* BLAMPaymentItemModel.swift */,
-				1ABE33D35DB5300C74F0A5E81418AD7E /* BLAMPaymentItemProtocol.swift */,
+				D09950FD1D9AAD480027F277 /* Fonts */,
 			);
-			path = Classes;
+			name = Assets;
+			sourceTree = "<group>";
+		};
+		D09950FD1D9AAD480027F277 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D09950FE1D9AAD650027F277 /* fontawesome-webfont.ttf */,
+			);
+			name = Fonts;
 			sourceTree = "<group>";
 		};
 		EED3188031111C56773AD91BF16A21B6 /* Products */ = {
@@ -290,11 +309,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		93B83A0322046A9AAAB67E021485F046 /* Headers */ = {
+		85938E23726E80CB92AE4F669BAB2C13 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				73B5DE345012A0456E949531D02D04F5 /* BLAMPayment-umbrella.h in Headers */,
+				0C30670C1A7EC4C35BA5E20AA0A702CC /* BLAMPayment-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +336,23 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		232E6FA8431D128C76F93682B9FBB5E3 /* BLAMPayment-BLAMPayment */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2B4EA0805BCFF13C24363773EE2BE0D5 /* Build configuration list for PBXNativeTarget "BLAMPayment-BLAMPayment" */;
+			buildPhases = (
+				60E3CB72A65E1389D52CFAEBC06BF364 /* Sources */,
+				D5494047F57119C89C4E917E857AEA16 /* Frameworks */,
+				D4BAEA9BEE133D90B8ACBB40E6D34521 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "BLAMPayment-BLAMPayment";
+			productName = "BLAMPayment-BLAMPayment";
+			productReference = C1AD8316661CFB65703C53873E14B5DD /* BLAMPayment.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
 		94BDD29592C1AB4242F250AE90337099 /* Pods-BLAMPayment_Tests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 19C10F4C228BFE68F88D9A88ABEA71CC /* Build configuration list for PBXNativeTarget "Pods-BLAMPayment_Tests" */;
@@ -352,36 +388,19 @@
 			productReference = 59E7A52F75D81C45CB27E4A6FF643443 /* Pods_BLAMPayment_Example.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		E73BF30A7ACE064CA8DBAC6017E4EA33 /* BLAMPayment-BLAMPayment */ = {
+		E3E7395D05C31F9AC0A0F95876E1B0CD /* BLAMPayment */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2CFAB86E9D2701BEBEB2D363488E7122 /* Build configuration list for PBXNativeTarget "BLAMPayment-BLAMPayment" */;
+			buildConfigurationList = 61447CDAF8840D775CC99FDA411F94CE /* Build configuration list for PBXNativeTarget "BLAMPayment" */;
 			buildPhases = (
-				D822232122C535D3171D2EC6051BF221 /* Sources */,
-				099EA8BF3784F72E07E150B6ED2AFF6D /* Frameworks */,
-				D89F091361BD4243B846F9FDFDD0C00F /* Resources */,
+				E30E45479253FD2C11F67D05C7184B53 /* Sources */,
+				7ADA5EA50E16468F9B4088B312EA289A /* Frameworks */,
+				D73369E2C8E8BBE447D65AA154CFAC6E /* Resources */,
+				85938E23726E80CB92AE4F669BAB2C13 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-			);
-			name = "BLAMPayment-BLAMPayment";
-			productName = "BLAMPayment-BLAMPayment";
-			productReference = C1AD8316661CFB65703C53873E14B5DD /* BLAMPayment.bundle */;
-			productType = "com.apple.product-type.bundle";
-		};
-		F1DF295CF7C053051C89682027829F3A /* BLAMPayment */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = C6D6CDC9EE84FA03A9C03DBAD59572CA /* Build configuration list for PBXNativeTarget "BLAMPayment" */;
-			buildPhases = (
-				C3177BDC080A623673CD1116AE1C3B62 /* Sources */,
-				1EE96C35C646EAD78B58037439E2872F /* Frameworks */,
-				43729CC7B4B8E038CD1B58B511986A80 /* Resources */,
-				93B83A0322046A9AAAB67E021485F046 /* Headers */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				D8F1A7556EEA16DB6D30D93678FC8C0E /* PBXTargetDependency */,
+				E502AE88D058E4822CCC35F476947A6A /* PBXTargetDependency */,
 			);
 			name = BLAMPayment;
 			productName = BLAMPayment;
@@ -396,14 +415,6 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0700;
-				TargetAttributes = {
-					AD8D63A5737FCE4DFD454F2FF34FEF48 = {
-						LastSwiftMigration = 0800;
-					};
-					F1DF295CF7C053051C89682027829F3A = {
-						LastSwiftMigration = 0800;
-					};
-				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -417,8 +428,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F1DF295CF7C053051C89682027829F3A /* BLAMPayment */,
-				E73BF30A7ACE064CA8DBAC6017E4EA33 /* BLAMPayment-BLAMPayment */,
+				E3E7395D05C31F9AC0A0F95876E1B0CD /* BLAMPayment */,
+				232E6FA8431D128C76F93682B9FBB5E3 /* BLAMPayment-BLAMPayment */,
 				AD8D63A5737FCE4DFD454F2FF34FEF48 /* Pods-BLAMPayment_Example */,
 				94BDD29592C1AB4242F250AE90337099 /* Pods-BLAMPayment_Tests */,
 			);
@@ -426,38 +437,30 @@
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		43729CC7B4B8E038CD1B58B511986A80 /* Resources */ = {
+		D4BAEA9BEE133D90B8ACBB40E6D34521 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				61FC41E1CABDE05863C17E0C408DA623 /* BLAMPayment.bundle in Resources */,
+				AEEE97C853DCC393586C0B8D273C3999 /* BLAMPaymentCVCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D89F091361BD4243B846F9FDFDD0C00F /* Resources */ = {
+		D73369E2C8E8BBE447D65AA154CFAC6E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2ABC6BF13477955E5E9C3D0B6A6FCA85 /* BLAMPaymentCVCell.xib in Resources */,
+				DC580F3A5BF86B7092226B7FC3B75E88 /* BLAMPayment.bundle in Resources */,
+				D09950FF1D9AAD650027F277 /* fontawesome-webfont.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		C3177BDC080A623673CD1116AE1C3B62 /* Sources */ = {
+		60E3CB72A65E1389D52CFAEBC06BF364 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2097D4AFC7541A34C9751F321F67BD82 /* BLAMPayment-dummy.m in Sources */,
-				6449EC24BCD255217E0EEEFFD5B93C92 /* BLAMPaymentCVC.swift in Sources */,
-				20D8A58051408D47F2EB43D2037D6BF7 /* BLAMPaymentCVCell.swift in Sources */,
-				BAB0CF951ED6DCC1A689FDC66F86B24F /* BLAMPaymentCVCell.xib in Sources */,
-				2AAB387B30A0E972ABC1ED4DD0FEDE89 /* BLAMPaymentCVDataSource.swift in Sources */,
-				F22E216451DAFA8A76285E6EDBA0826F /* BLAMPaymentCVLayout.swift in Sources */,
-				2B586DA542AAA6DD215868B6B511A0C0 /* BLAMPaymentCVView.swift in Sources */,
-				DE95E61B105A22DA51DB04BD15818EA0 /* BLAMPaymentItemModel.swift in Sources */,
-				8980D32DC581D039280FB2F1B68F577B /* BLAMPaymentItemProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -469,18 +472,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D822232122C535D3171D2EC6051BF221 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D8C22C34AD8640E88A54E4BA3DA2328F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				1055092840E546F3D3CDE6BDA729DFA6 /* Pods-BLAMPayment_Example-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E30E45479253FD2C11F67D05C7184B53 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A4140C87AA7F9FD6D444ACD4FE4A9FAD /* BLAMPayment-dummy.m in Sources */,
+				C42E3166F4292B44F8C5F1973C70A8E9 /* BLAMPaymentCVC.swift in Sources */,
+				8AC41ECF88F6E51370F368FEAF449DDB /* BLAMPaymentCVCell.swift in Sources */,
+				236EA0A9992891D69EE4A413D3EB1497 /* BLAMPaymentCVCell.xib in Sources */,
+				57A22DBF41B05508B7BB33362ACA7566 /* BLAMPaymentCVDataSource.swift in Sources */,
+				2D380CF339F6D6E38F1723EE0F702C0D /* BLAMPaymentCVLayout.swift in Sources */,
+				D8ACCAC8F9517B2B9FBA2D74CD7DB855 /* BLAMPaymentCVView.swift in Sources */,
+				544283019E0C8B9B94437AF3219E43AB /* BLAMPaymentItemModel.swift in Sources */,
+				4D9483055288098420AC02CE6FDCA0A1 /* BLAMPaymentItemProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -490,36 +502,19 @@
 		1ED35215EA2D5048BDB343DFF7BC7EB8 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = BLAMPayment;
-			target = F1DF295CF7C053051C89682027829F3A /* BLAMPayment */;
+			target = E3E7395D05C31F9AC0A0F95876E1B0CD /* BLAMPayment */;
 			targetProxy = C6C806CB7D0296277A99A55EC8CDCAF8 /* PBXContainerItemProxy */;
 		};
-		D8F1A7556EEA16DB6D30D93678FC8C0E /* PBXTargetDependency */ = {
+		E502AE88D058E4822CCC35F476947A6A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "BLAMPayment-BLAMPayment";
-			target = E73BF30A7ACE064CA8DBAC6017E4EA33 /* BLAMPayment-BLAMPayment */;
-			targetProxy = CD26BE0313631BE806DD6A3CD687C89E /* PBXContainerItemProxy */;
+			target = 232E6FA8431D128C76F93682B9FBB5E3 /* BLAMPayment-BLAMPayment */;
+			targetProxy = 61F93035038CCF705D8DDB0CABB5A692 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		0CF0917DCC48BFE54B1CB2437B126CD9 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = D53667E63E6EF959664C8A9FF1B14C65 /* BLAMPayment.xcconfig */;
-			buildSettings = {
-				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BLAMPayment";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/BLAMPayment/ResourceBundle-BLAMPayment-Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				PRODUCT_NAME = BLAMPayment;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
-		0EBE800DCA86AD5FD77A39E25BAA69FD /* Debug */ = {
+		06BD6D072072749EF18620C5801ADC1A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D53667E63E6EF959664C8A9FF1B14C65 /* BLAMPayment.xcconfig */;
 			buildSettings = {
@@ -644,7 +639,6 @@
 				PRODUCT_NAME = Pods_BLAMPayment_Example;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -680,6 +674,39 @@
 				PRODUCT_NAME = Pods_BLAMPayment_Tests;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		85343AA14A8C7E4DE8874F98BC6373C7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D53667E63E6EF959664C8A9FF1B14C65 /* BLAMPayment.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/BLAMPayment/BLAMPayment-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/BLAMPayment/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/BLAMPayment/BLAMPayment.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = BLAMPayment;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -756,47 +783,30 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-		B3BDFBB9CDDD0D9A4C3BA061F3ADD41D /* Debug */ = {
+		C32D5FBEF0027BE56ADB0EB38CB6716E /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D53667E63E6EF959664C8A9FF1B14C65 /* BLAMPayment.xcconfig */;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				CONFIGURATION_BUILD_DIR = "$(BUILD_DIR)/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)/BLAMPayment";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/BLAMPayment/BLAMPayment-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/BLAMPayment/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				INFOPLIST_FILE = "Target Support Files/BLAMPayment/ResourceBundle-BLAMPayment-Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/BLAMPayment/BLAMPayment.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = BLAMPayment;
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
+				WRAPPER_EXTENSION = bundle;
 			};
-			name = Debug;
+			name = Release;
 		};
-		B4D4421E33A23FA3D1FDBC69E1CF62F2 /* Release */ = {
+		FE415E0ED888EAB25B3B30D6C5129857 /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D53667E63E6EF959664C8A9FF1B14C65 /* BLAMPayment.xcconfig */;
 			buildSettings = {
@@ -840,11 +850,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CFAB86E9D2701BEBEB2D363488E7122 /* Build configuration list for PBXNativeTarget "BLAMPayment-BLAMPayment" */ = {
+		2B4EA0805BCFF13C24363773EE2BE0D5 /* Build configuration list for PBXNativeTarget "BLAMPayment-BLAMPayment" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0EBE800DCA86AD5FD77A39E25BAA69FD /* Debug */,
-				0CF0917DCC48BFE54B1CB2437B126CD9 /* Release */,
+				06BD6D072072749EF18620C5801ADC1A /* Debug */,
+				C32D5FBEF0027BE56ADB0EB38CB6716E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -858,20 +868,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		61447CDAF8840D775CC99FDA411F94CE /* Build configuration list for PBXNativeTarget "BLAMPayment" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				85343AA14A8C7E4DE8874F98BC6373C7 /* Debug */,
+				FE415E0ED888EAB25B3B30D6C5129857 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		62F5B139434A57CA9104615291AA9BB5 /* Build configuration list for PBXNativeTarget "Pods-BLAMPayment_Example" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				AAC8508114292D3EE9000456A608FA12 /* Debug */,
 				7C03BBC13F44D9D714143652E9B86A3E /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		C6D6CDC9EE84FA03A9C03DBAD59572CA /* Build configuration list for PBXNativeTarget "BLAMPayment" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				B3BDFBB9CDDD0D9A4C3BA061F3ADD41D /* Debug */,
-				B4D4421E33A23FA3D1FDBC69E1CF62F2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
