@@ -41,5 +41,5 @@ A configurable subscription selection interface to enable a user to view the fea
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'FontAwesome.swift'
+  # s.dependency 'FontAwesome.swift'
 end
