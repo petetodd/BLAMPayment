@@ -20,7 +20,6 @@
 		8AC41ECF88F6E51370F368FEAF449DDB /* BLAMPaymentCVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8AD4560215E7E904727E012C72C019F8 /* BLAMPaymentCVCell.swift */; };
 		A4140C87AA7F9FD6D444ACD4FE4A9FAD /* BLAMPayment-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 30D5F153EFF4F2D621DDE731DA6B9C64 /* BLAMPayment-dummy.m */; };
 		AEEE97C853DCC393586C0B8D273C3999 /* BLAMPaymentCVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 56D6043FA179D41A3DEECCC9680D23BC /* BLAMPaymentCVCell.xib */; };
-		C42E3166F4292B44F8C5F1973C70A8E9 /* BLAMPaymentCVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEA9402648D8E62640D8D376BB3D5EED /* BLAMPaymentCVC.swift */; };
 		CAE6DACA85BA793B0AAC4FB76CDAF01F /* Pods-BLAMPayment_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 177ACC95AD93345EE767E1D3074F41BF /* Pods-BLAMPayment_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D09950FF1D9AAD650027F277 /* fontawesome-webfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D09950FE1D9AAD650027F277 /* fontawesome-webfont.ttf */; };
 		D8ACCAC8F9517B2B9FBA2D74CD7DB855 /* BLAMPaymentCVView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85204F97882A9EBAC7230253606651BF /* BLAMPaymentCVView.swift */; };
@@ -76,7 +75,6 @@
 		85204F97882A9EBAC7230253606651BF /* BLAMPaymentCVView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVView.swift; sourceTree = "<group>"; };
 		8AD4560215E7E904727E012C72C019F8 /* BLAMPaymentCVCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVCell.swift; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		BEA9402648D8E62640D8D376BB3D5EED /* BLAMPaymentCVC.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = BLAMPaymentCVC.swift; sourceTree = "<group>"; };
 		BF28D04C2CE95B8EB787156784850E1A /* Pods-BLAMPayment_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-BLAMPayment_Tests-dummy.m"; sourceTree = "<group>"; };
 		C18382915C308FEE6C7DB2B1E82BB461 /* Pods-BLAMPayment_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-BLAMPayment_Example.modulemap"; sourceTree = "<group>"; };
 		C1AD8316661CFB65703C53873E14B5DD /* BLAMPayment.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BLAMPayment.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -190,7 +188,6 @@
 		4BD4FD332F7AEE39B58BC824705AC4EE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				BEA9402648D8E62640D8D376BB3D5EED /* BLAMPaymentCVC.swift */,
 				8AD4560215E7E904727E012C72C019F8 /* BLAMPaymentCVCell.swift */,
 				56D6043FA179D41A3DEECCC9680D23BC /* BLAMPaymentCVCell.xib */,
 				3E8D325033D280A644E97A0C7A25F203 /* BLAMPaymentCVDataSource.swift */,
@@ -485,7 +482,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				A4140C87AA7F9FD6D444ACD4FE4A9FAD /* BLAMPayment-dummy.m in Sources */,
-				C42E3166F4292B44F8C5F1973C70A8E9 /* BLAMPaymentCVC.swift in Sources */,
 				8AC41ECF88F6E51370F368FEAF449DDB /* BLAMPaymentCVCell.swift in Sources */,
 				236EA0A9992891D69EE4A413D3EB1497 /* BLAMPaymentCVCell.xib in Sources */,
 				57A22DBF41B05508B7BB33362ACA7566 /* BLAMPaymentCVDataSource.swift in Sources */,

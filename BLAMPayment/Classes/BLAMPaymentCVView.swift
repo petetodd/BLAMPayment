@@ -59,13 +59,31 @@ open class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
         collectionView = UICollectionView.init(frame: self.bounds, collectionViewLayout: layout)
         
         // Register cell classes
-        let podBundle = Bundle(for: BLAMPaymentCVC.self)
+        let podBundle = Bundle(for: BLAMPaymentCVView.self)
         
         
         self.collectionView!.register( UINib(nibName: "BLAMPaymentCVCell", bundle: podBundle), forCellWithReuseIdentifier: reuseIdentifier)
         
         // Set datasource
         collectionView.dataSource = dataSource
+        
+   /*
+        // Dynamically load font
+        let fontURL = podBundle.url(forResource: "fontawesome-webfont", withExtension: "ttf")
+        CTFontManagerRegisterFontsForURL(fontURL as! CFURL, CTFontManagerScope.process, nil)
+        var fontAwesome = UIFont(name: "FontAwesome", size: 60)
+        var attrs = [NSFontAttributeName : fontAwesome!,
+                     NSForegroundColorAttributeName : UIColor.red,
+                     NSBaselineOffsetAttributeName : 0.0] as AnyObject
+        
+        let nameAttrSring = NSAttributedString(string: "\u{f073}", attributes: attrs as! [String : Any])
+        
+     //   let dataSource:BLAMPaymentCVDataSource = (self.collectionView?.dataSource as? BLAMPaymentCVDataSource)!
+        
+        dataSource.strAwesome = nameAttrSring
+
+   */     
+        
         
         // Set a white background (we could use a Decoration View)
         collectionView.backgroundColor = self.backgroundColor
@@ -108,7 +126,7 @@ open class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
     func demoData(){
         let valDateRenew = Date()
 
-        let item1 = BLAMPaymentItemModel.init(awesomeIcon: "fa-subway", strTitle: "Single user", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Single Asset", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE",  price : 0, codeISO : "USD", subRef : "SINGLE", isActive: "FALSE", dateRenew: valDateRenew)
+        let item1 = BLAMPaymentItemModel.init(awesomeIcon: "\u{f073}", strTitle: "Single user", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Single Asset", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE",  price : 0, codeISO : "USD", subRef : "SINGLE", isActive: "FALSE", dateRenew: valDateRenew)
         let item2 = BLAMPaymentItemModel.init(awesomeIcon: "fa-user", strTitle: "Team", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Team", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD",  subRef : "TEAM", isActive: "TRUE", dateRenew: valDateRenew)
         let item3 = BLAMPaymentItemModel.init(awesomeIcon: "fa-home", strTitle: "Business", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Business", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "",  price : 9.99, codeISO : "USD",  subRef : "BUSINESS", isActive: "FALSE", dateRenew: valDateRenew)
 

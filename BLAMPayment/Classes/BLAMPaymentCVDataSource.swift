@@ -17,6 +17,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
     
     var dictData : Dictionary <String, BLAMPaymentItemModel>!
     var callingView : BLAMPaymentCVView!
+    var strAwesome : NSAttributedString!
 
     
     // MARK: UICollectionViewDataSource
@@ -46,7 +47,25 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
        // let str1 = "fa-github"
         
      //   cell.lblIcon.font =  UIFont(name: "FontAwesome", size: 60)
-        cell.lblIcon.text = "\u{f073}"
+        
+        // Dynamically load font
+        let podBundle = Bundle(for: BLAMPaymentCVView.self)
+
+        let fontURL = podBundle.url(forResource: "fontawesome-webfont", withExtension: "ttf")
+        CTFontManagerRegisterFontsForURL(fontURL as! CFURL, CTFontManagerScope.process, nil)
+        var fontAwesome = UIFont(name: "FontAwesome", size: 60)
+        var attrs = [NSFontAttributeName : fontAwesome!,
+                     NSForegroundColorAttributeName : UIColor.red,
+                     NSBaselineOffsetAttributeName : 0.0] as AnyObject
+        
+        let nameAttrSring = NSAttributedString(string: (dataModel?.awesomeIcon)!, attributes: attrs as! [String : Any])
+        
+        cell.lblIcon.attributedText = nameAttrSring
+
+
+        
+        
+        
 
         cell.lblTitle.text = dataModel?.strTitle
         cell.tvDesc.text = dataModel?.strDesc

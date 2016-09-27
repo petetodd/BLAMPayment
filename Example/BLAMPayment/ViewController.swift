@@ -87,7 +87,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         var dictData = Dictionary <String,AnyObject>()
         var subRef = "SINGLE"
         var valDisplayOrder = "1"
-        var valAwesomeIcon = "fa-home"
+        var valAwesomeIcon = "\u{f015}"
         var valTitle = "Single user"
         var valDesc = "Description about some single user stuff."
         var valText1 = "Single Asset"
@@ -126,7 +126,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         dictData.removeAll()
         subRef = "MICRO"
         valDisplayOrder = "2"
-        valAwesomeIcon = "fa-users"
+        valAwesomeIcon = "\u{f0c0}"
         valTitle = "Micro"
         valDesc = "Description about features for the Micro product."
         valText1 = "5 Users"
@@ -159,7 +159,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         dictData.removeAll()
         valDisplayOrder = "3"
         subRef = "TEAM"
-        valAwesomeIcon = "fa-user-plus"
+        valAwesomeIcon = "\u{f234}"
         valTitle = "Team"
         valDesc = "Description about features for the professional team product."
         valText1 = "25 Users"
@@ -192,7 +192,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         dictData.removeAll()
         subRef = "CORPORATE"
         valDisplayOrder = "4"
-        valAwesomeIcon = "fa-bank"
+        valAwesomeIcon = "\u{f19c}"
         valTitle = "Corporate"
         valDesc = "Description about features for the corporate product."
         valText1 = "100 Users"
@@ -226,7 +226,8 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         dictData.removeAll()
         subRef = "ENTERPRISE"
         valDisplayOrder = "5"
-        valAwesomeIcon = "fa-globe"
+        valAwesomeIcon = "\u{f0ac}"
+
         valTitle = "Enterprise"
         valDesc = "Description about features for the Enterprise product."
         valText1 = "Unlimited Users"
