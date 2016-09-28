@@ -21,7 +21,7 @@ class BLAMPaymentCVLayout: UICollectionViewFlowLayout {
     var cellWidth = 300
     var cellHeight = 600
     
-    override func collectionViewContentSize() -> CGSize {
+    override var collectionViewContentSize : CGSize {
         screenSize = self.collectionView!.frame
         screenWidth = screenSize.width
         screenHeight = screenSize.height
@@ -37,13 +37,13 @@ class BLAMPaymentCVLayout: UICollectionViewFlowLayout {
             yOffset = diff / 2
         }
         
-        return CGSizeMake(CGFloat(widthView), CGFloat(cellHeight))
+        return CGSize(width: CGFloat(widthView), height: CGFloat(cellHeight))
     }
     
-    override func layoutAttributesForElementsInRect(rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
+    override func layoutAttributesForElements(in rect: CGRect) -> [UICollectionViewLayoutAttributes]? {
         // Cells
         var attributesToReturn = [UICollectionViewLayoutAttributes]()
-        var visibleRect = CGRectZero
+        var visibleRect = CGRect.zero
         visibleRect.origin = (self.collectionView?.contentOffset)!
         visibleRect.size = (self.collectionView?.bounds.size)!
 
@@ -52,7 +52,7 @@ class BLAMPaymentCVLayout: UICollectionViewFlowLayout {
         // Could restrict this to the visible cells - might need this with a more complex dash
         for indexPath in indexPathsOfItemsInRect(visibleRect)
         {
-            attributesToReturn.append((layoutAttributesForItemAtIndexPath(indexPath as! NSIndexPath)!))
+            attributesToReturn.append((layoutAttributesForItem(at: indexPath as! IndexPath)!))
         }
         
  
@@ -67,13 +67,13 @@ class BLAMPaymentCVLayout: UICollectionViewFlowLayout {
     }
     
     
-    override func layoutAttributesForItemAtIndexPath(indexPath: NSIndexPath) -> UICollectionViewLayoutAttributes? {
-        let attributes = UICollectionViewLayoutAttributes(forCellWithIndexPath: indexPath)
-        var frame = CGRectZero
+    override func layoutAttributesForItem(at indexPath: IndexPath) -> UICollectionViewLayoutAttributes? {
+        let attributes = UICollectionViewLayoutAttributes(forCellWith: indexPath)
+        var frame = CGRect.zero
         frame.size.height = CGFloat(cellHeight)
         frame.size.width = CGFloat(cellWidth)
         
-        let xPt = xOffset + (indexPath.row * cellWidth) + (xOffset * indexPath.row)
+        let xPt = xOffset + ((indexPath as NSIndexPath).row * cellWidth) + (xOffset * (indexPath as NSIndexPath).row)
         
         frame.origin.x = CGFloat(xPt)
         frame.origin.y = CGFloat(yOffset)
@@ -88,14 +88,14 @@ class BLAMPaymentCVLayout: UICollectionViewFlowLayout {
     
     
     // MARK: - Helpers
-    func indexPathsOfItemsInRect(rect:CGRect) ->NSArray
+    func indexPathsOfItemsInRect(_ rect:CGRect) ->NSArray
     {
         let indexPaths = NSMutableArray()
         
         let dataSource:BLAMPaymentCVDataSource = (self.collectionView?.dataSource as? BLAMPaymentCVDataSource)!
         // Create an array of the visible Index paths (or as we have a small number just add all to the array
         for i in 0 ..< dataSource.dictData.count{
-            indexPaths.addObject(NSIndexPath(forItem: i, inSection: 0))
+            indexPaths.add(IndexPath(item: i, section: 0))
         }
 
         return indexPaths

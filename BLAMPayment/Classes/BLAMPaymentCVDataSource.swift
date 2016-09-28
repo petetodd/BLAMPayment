@@ -9,7 +9,6 @@
 import UIKit
 import PassKit
 
-import FontAwesome_swift
 
 private let reuseIdentifier = "BLAMPaymentCVCell"
 
@@ -18,10 +17,11 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
     
     var dictData : Dictionary <String, BLAMPaymentItemModel>!
     var callingView : BLAMPaymentCVView!
+    var strAwesome : NSAttributedString!
 
     
     // MARK: UICollectionViewDataSource
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
          return dictData.count
     }
     
@@ -29,30 +29,50 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
     
     
 
-   func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+   func numberOfSections(in collectionView: UICollectionView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
     
 
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier(reuseIdentifier, forIndexPath: indexPath) as! BLAMPaymentCVCell
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BLAMPaymentCVCell
 
         // Configure the cell
-        let keys = Array(dictData.keys).sort(<)
-        let key = keys[indexPath.row]
+        let keys = Array(dictData.keys).sorted(by: <)
+        let key = keys[(indexPath as NSIndexPath).row]
         let dataModel = dictData[key]
         cell.model = dataModel
         cell.delegate = callingView
        // let str1 = "fa-github"
-        let strIcon = String.fontAwesomeIconWithCode(dataModel!.awesomeIcon)
         
-        cell.lblIcon.font =  UIFont.fontAwesomeOfSize(60)
-        cell.lblIcon.text = strIcon
+     //   cell.lblIcon.font =  UIFont(name: "FontAwesome", size: 60)
+        
+        // Dynamically load font
+     //   let podBundle = Bundle(for: BLAMPaymentCVView.self)
+        let podBundle = Bundle(path: Bundle(for: BLAMPaymentCVView.self).path(forResource: "BLAMPayment", ofType: "bundle")!)
+
+
+        let fontURL = podBundle?.url(forResource: "fontawesome-webfont", withExtension: "ttf")
+        CTFontManagerRegisterFontsForURL(fontURL as! CFURL, CTFontManagerScope.process, nil)
+        let fontAwesome = UIFont(name: "FontAwesome", size: 60)
+        let attrs = [NSFontAttributeName : fontAwesome!,
+                     NSForegroundColorAttributeName : UIColor.red,
+                     NSBaselineOffsetAttributeName : 0.0] as AnyObject
+        
+        let nameAttrSring = NSAttributedString(string: (dataModel?.awesomeIcon)!, attributes: attrs as! [String : Any])
+        
+        cell.lblIcon.attributedText = nameAttrSring
+
+
+        
+        
+        
+
         cell.lblTitle.text = dataModel?.strTitle
         cell.tvDesc.text = dataModel?.strDesc
-        cell.tvDesc.textAlignment = NSTextAlignment.Center
-        cell.tvDesc.textColor = UIColor.darkGrayColor()
+        cell.tvDesc.textAlignment = NSTextAlignment.center
+        cell.tvDesc.textColor = UIColor.darkGray
         cell.tvDesc.font = UIFont(name: "HelveticaNeue", size: 17)
         cell.lblText1.text = dataModel?.text1
         cell.lblText2.text = dataModel?.text2
@@ -62,7 +82,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         // Highlight if the user subscribed to this option
         if (dataModel?.isActive == "TRUE"){
             cell.layer.borderWidth = 3
-            cell.layer.borderColor = UIColor.greenColor().CGColor
+            cell.layer.borderColor = UIColor.green.cgColor
         }else{
             cell.layer.borderWidth = 0
 
@@ -75,7 +95,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         if dataModel?.price  == 0 {
             // Price
             cell.lblPrice.text = dataModel?.textPrice
-            cell.butOtherPayOptions.hidden = true
+            cell.butOtherPayOptions.isHidden = true
             let viewApple = cell.viewWithTag(100)
             if viewApple != nil{
                 viewApple?.removeFromSuperview()
@@ -83,7 +103,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
             return cell
         }
         // Create a price label with amount and currency code (if supported)
-        cell.viewPayFrame.hidden = false
+        cell.viewPayFrame.isHidden = false
         
         let strCurrCode = currCodeHexFromISO((dataModel?.codeISO)!)
         let strLabelPrice = "\(strCurrCode)\(dataModel!.price) \(dataModel!.textPrice)"
@@ -96,22 +116,22 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         if (dataModel?.isActive == "TRUE"){
             // This is the selected subscription - show a cancel option and renewal date
             let butCancel = UIButton()
-            butCancel.setTitle("Cancel Subscription", forState: UIControlState.Normal)
+            butCancel.setTitle("Cancel Subscription", for: UIControlState())
             butCancel.tag = 100
-            butCancel.addTarget(cell, action: #selector(cell.butCancelAction), forControlEvents: .TouchUpInside)
+            butCancel.addTarget(cell, action: #selector(cell.butCancelAction), for: .touchUpInside)
             butCancel.frame = cell.viewPayFrame.frame
-            butCancel.backgroundColor = UIColor.redColor()
+            butCancel.backgroundColor = UIColor.red
             cell.addSubview(butCancel)
             // Display the renewal date
             let lblRenewDate = UILabel()
-            let rectFrame = CGRectMake(20, cell.butOtherPayOptions.frame.origin.y, cell.frame.width, cell.butOtherPayOptions.frame.height)
+            let rectFrame = CGRect(x: 20, y: cell.butOtherPayOptions.frame.origin.y, width: cell.frame.width, height: cell.butOtherPayOptions.frame.height)
             lblRenewDate.frame = rectFrame
 
-            cell.butOtherPayOptions.hidden = true
+            cell.butOtherPayOptions.isHidden = true
             
-            let dateFormatter = NSDateFormatter()
+            let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "dd MMMM"
-            let txtDate = dateFormatter.stringFromDate((dataModel?.dateRenew!)!)
+            let txtDate = dateFormatter.string(from: (dataModel?.dateRenew!)! as Date)
             lblRenewDate.text = "Next payment: \(txtDate)"
             cell.addSubview(lblRenewDate)
 
@@ -119,11 +139,11 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
             
             
         }else{ // Show pay options
-            cell.butOtherPayOptions.hidden = false
+            cell.butOtherPayOptions.isHidden = false
 
             let butApplePay = PKPaymentButton()
             butApplePay.tag = 100
-            butApplePay.addTarget(cell, action: #selector(cell.butApplePAyAction), forControlEvents: .TouchUpInside)
+            butApplePay.addTarget(cell, action: #selector(cell.butApplePAyAction), for: .touchUpInside)
             butApplePay.frame = cell.viewPayFrame.frame
             cell.addSubview(butApplePay)
             
@@ -141,7 +161,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
     }
     
     
-    func currCodeHexFromISO(currISO : String)-> String{
+    func currCodeHexFromISO(_ currISO : String)-> String{
         var currHex = ""
         switch currISO {
         case "USD":

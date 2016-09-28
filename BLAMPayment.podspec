@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLAMPayment'
-  s.version          = '0.0.4'
+  s.version          = '0.0.6'
   s.summary          = 'A Collection View based interface for selecting enrollment options.  To implement simply subclass a UIView.'
 
 # This description is used to generate tags and improve search results.
@@ -32,7 +32,7 @@ A configurable subscription selection interface to enable a user to view the fea
 
   s.source_files = 'BLAMPayment/Classes/**/*'
     s.resource_bundles = {
-'BLAMPayment' => ['BLAMPayment/Classes/**/*.{storyboard,xib}']
+'BLAMPayment' => ['BLAMPayment/Classes/**/*.{storyboard,xib}', 'BLAMPayment/Assets/Fonts/*.{ttf}']
 }
 
   # s.resource_bundles = {
@@ -41,5 +41,5 @@ A configurable subscription selection interface to enable a user to view the fea
 
   # s.public_header_files = 'Pod/Classes/**/*.h'
   # s.frameworks = 'UIKit', 'MapKit'
-  s.dependency 'FontAwesome.swift'
+  # s.dependency 'FontAwesome.swift'
 end

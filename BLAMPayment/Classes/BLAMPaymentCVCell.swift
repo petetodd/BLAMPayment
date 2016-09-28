@@ -10,8 +10,8 @@ import UIKit
 import PassKit
 
 protocol BLAMPaymentCVCellProtocol {
-    func payApple(subRef: String, codeISO: String, amount: NSNumber)
-    func payOther(subRef: String, codeISO: String, amount: NSNumber)
+    func payApple(_ subRef: String, codeISO: String, amount: NSNumber)
+    func payOther(_ subRef: String, codeISO: String, amount: NSNumber)
     func cancelSub()
 
 }
@@ -51,7 +51,7 @@ class BLAMPaymentCVCell: UICollectionViewCell {
         lblIcon.text = "\u{f015}"
     }
 
-    @IBAction func butOtherAction(sender: AnyObject) {
+    @IBAction func butOtherAction(_ sender: AnyObject) {
         delegate.payOther(model.subRef, codeISO: model.codeISO, amount: model.price)
     }
     
