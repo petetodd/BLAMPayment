@@ -49,9 +49,11 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
      //   cell.lblIcon.font =  UIFont(name: "FontAwesome", size: 60)
         
         // Dynamically load font
-        let podBundle = Bundle(for: BLAMPaymentCVView.self)
+     //   let podBundle = Bundle(for: BLAMPaymentCVView.self)
+        let podBundle = Bundle(path: Bundle(for: BLAMPaymentCVView.self).path(forResource: "BLAMPayment", ofType: "bundle")!)
 
-        let fontURL = podBundle.url(forResource: "fontawesome-webfont", withExtension: "ttf")
+
+        let fontURL = podBundle?.url(forResource: "fontawesome-webfont", withExtension: "ttf")
         CTFontManagerRegisterFontsForURL(fontURL as! CFURL, CTFontManagerScope.process, nil)
         let fontAwesome = UIFont(name: "FontAwesome", size: 60)
         let attrs = [NSFontAttributeName : fontAwesome!,
