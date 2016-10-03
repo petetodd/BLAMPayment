@@ -87,7 +87,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         // Item 1 - a single user subscription
         var dictData = Dictionary <String,AnyObject>()
         var subRef = "SINGLE"
-        var valDisplayOrder = "1"
+        var valDisplayOrder = 1
         var valAwesomeIcon = "\u{f015}"
         var valTitle = "Single user"
         var valDesc = "Description about some single user stuff."
@@ -126,7 +126,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         // Item 2 - a micro team subscription
         dictData.removeAll()
         subRef = "MICRO"
-        valDisplayOrder = "2"
+        valDisplayOrder = 2
         valAwesomeIcon = "\u{f0c0}"
         valTitle = "Micro"
         valDesc = "Description about features for the Micro product."
@@ -158,7 +158,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         
         // Item 3 - a alrge team subscription
         dictData.removeAll()
-        valDisplayOrder = "3"
+        valDisplayOrder = 3
         subRef = "TEAM"
         valAwesomeIcon = "\u{f234}"
         valTitle = "Team"
@@ -192,7 +192,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         // Item 4 - a large team subscription
         dictData.removeAll()
         subRef = "CORPORATE"
-        valDisplayOrder = "4"
+        valDisplayOrder = 4
         valAwesomeIcon = "\u{f19c}"
         valTitle = "Corporate"
         valDesc = "Description about features for the corporate product."
@@ -226,7 +226,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         // Item 5 - a global team subscription
         dictData.removeAll()
         subRef = "ENTERPRISE"
-        valDisplayOrder = "5"
+        valDisplayOrder = 5
         valAwesomeIcon = "\u{f0ac}"
 
         valTitle = "Enterprise"

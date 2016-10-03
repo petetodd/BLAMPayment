@@ -46,6 +46,8 @@ open class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
     
     
     open func refresh(){
+        dataSource.dictData = dictData
+
         collectionView.reloadData()
     }
     
@@ -111,10 +113,12 @@ open class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
     open func addDisplayItem(_ inDict : Dictionary <String, AnyObject>){
         let itemModel = BLAMPaymentItemModel.init(awesomeIcon: inDict["awesomeIcon"]! as! String, strTitle: inDict["strTitle"]! as! String, strDesc: inDict["strDesc"]! as! String, text1: inDict["text1"]! as! String, text2: inDict["text2"]! as! String, text3: inDict["text3"]! as! String, text4: inDict["text4"]! as! String, textPrice: inDict["textPrice"]! as! String, price : inDict["price"]! as! NSNumber, codeISO : inDict["codeISO"]! as! String, subRef : inDict["subRef"]! as! String, isActive :  inDict["isActive"]! as! String, dateRenew : inDict["dateRenew"]! as? Date)
         // dictData = [inDict["valDisplayOrder"]!: itemModel]
+        let nbrDisplayOrder = inDict["displayOrder"]! as! NSNumber
+
         if dictData == nil{
-            dictData = [inDict["displayOrder"]! as! String: itemModel]
+            dictData = [nbrDisplayOrder.stringValue : itemModel]
         }else{
-            dictData[inDict["displayOrder"]! as! String] = itemModel
+            dictData[nbrDisplayOrder.stringValue] = itemModel
         }
     
     }
