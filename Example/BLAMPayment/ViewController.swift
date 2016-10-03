@@ -66,6 +66,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         let defaultAction = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(defaultAction)
         self.present(alert, animated: true, completion: nil)
+        viewBLAMPayment.clearAll()
 
     }
 

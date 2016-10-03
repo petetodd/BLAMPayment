@@ -44,12 +44,26 @@ open class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
         configCV()
     }
     
+    
+    open func refresh(){
+        collectionView.reloadData()
+    }
+    
+    open func clearAll(){
+        dictData.removeAll()
+        dataSource.dictData = dictData
+
+        collectionView.reloadData()
+
+    }
 
     
     func configCV(){
+        /*
         if dictData == nil {
             demoData()
         }
+ */
         
         dataSource.dictData = dictData
         dataSource.callingView = self
