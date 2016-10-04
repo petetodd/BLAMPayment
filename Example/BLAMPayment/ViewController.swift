@@ -114,7 +114,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         dictData["text2"] =  valText2 as AnyObject
         dictData["text3"] =  valText3 as AnyObject
         dictData["text4"] =  valText4 as AnyObject
-        dictData["textPrice"] =  valTextPrice as AnyObject
+        dictData["10"] =  valTextPrice as AnyObject
         dictData["price"] =  valPrice
         dictData["codeISO"] =  valCurrCode  as AnyObject
         dictData["subRef"] =  subRef  as AnyObject
