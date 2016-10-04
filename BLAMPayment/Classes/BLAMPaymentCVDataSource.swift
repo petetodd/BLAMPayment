@@ -133,6 +133,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
             dateFormatter.dateFormat = "dd MMMM"
             let txtDate = dateFormatter.string(from: (dataModel?.dateRenew!)! as Date)
             lblRenewDate.text = "Next payment: \(txtDate)"
+            lblRenewDate.tag = 500
             cell.addSubview(lblRenewDate)
 
 
@@ -146,6 +147,11 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
             butApplePay.addTarget(cell, action: #selector(cell.butApplePAyAction), for: .touchUpInside)
             butApplePay.frame = cell.viewPayFrame.frame
             cell.addSubview(butApplePay)
+            let lblRenewDate = cell.viewWithTag(500)
+            if lblRenewDate != nil{
+                lblRenewDate?.removeFromSuperview()
+            }
+            
             
         }
         
