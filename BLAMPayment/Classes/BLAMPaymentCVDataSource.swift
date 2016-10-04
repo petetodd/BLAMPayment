@@ -166,7 +166,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         switch currISO {
         case "USD":
             currHex = "\u{24}"
-        case "CAN":
+        case "CAD":
             currHex = "\u{24}"
         case "GBP":
             currHex = "\u{a3}"
