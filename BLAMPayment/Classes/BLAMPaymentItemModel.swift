@@ -26,7 +26,7 @@ class BLAMPaymentItemModel: BLAMPaymentItemProtocol {
     var dictData: Dictionary <String,AnyObject>?
 
     
-    init(awesomeIcon: String, strTitle: String, strDesc: String, text1: String, text2: String, text3: String, text4: String, textPrice: String, price : NSNumber, codeISO : String , subRef : String, isActive : String, dateRenew : Date?, dictData: Dictionary <String,AnyObject>?){
+    init(awesomeIcon: String, strTitle: String, strDesc: String, text1: String, text2: String, text3: String, text4: String, textPrice: String, price : NSNumber, codeISO : String , subRef : String, isActive : String, dateRenew : Date?){
         
         self.awesomeIcon = awesomeIcon
         self.strTitle = strTitle
@@ -44,9 +44,6 @@ class BLAMPaymentItemModel: BLAMPaymentItemProtocol {
             self.dateRenew = dateRenew!
         }else{
             self.dateRenew = nil
-        }
-        if dictData != nil{
-            self.dictData = dictData
         }
     }
 

@@ -18,6 +18,5 @@ protocol BLAMPaymentItemProtocol
     var text3: String {get set}
     var text4: String {get set}
     var textPrice: String {get set}
-    var dictData: Dictionary <String,AnyObject>? {get set}
 
 }
