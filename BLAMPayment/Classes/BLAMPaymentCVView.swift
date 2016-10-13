@@ -120,6 +120,7 @@ open class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
         }else{
             dictData[strDisplayOrder] = itemModel
         }
+        itemModel.dictData = inDict
     
     }
     
