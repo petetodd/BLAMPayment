@@ -130,8 +130,8 @@ open class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
         delegate.payWithApplePay(subRef: subRef, codeISO: codeISO, amount: amount)
     }
     
-    func payOther(_ subRef: String, codeISO: String, amount: NSNumber){
-        delegate.payWithOtherPay(subRef: subRef, codeISO: codeISO, amount: amount, dictionary: nil )
+    func payOther(_ subRef: String, codeISO: String, amount: NSNumber, dictionary: Dictionary <String, AnyObject>?){
+        delegate.payWithOtherPay(subRef: subRef, codeISO: codeISO, amount: amount, dictionary: dictionary )
     }
     
     func cancelSub(){
