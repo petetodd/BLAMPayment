@@ -13,7 +13,7 @@ private let reuseIdentifier = "BLAMPaymentCVCell"
 
 public protocol BLAMPaymentCVViewProtocol {
     func payWithApplePay(subRef: String, codeISO: String, amount: NSNumber)
-    func payWithOtherPay(subRef: String, codeISO: String, amount: NSNumber)
+    func payWithOtherPay(subRef: String, codeISO: String, amount: NSNumber, dictionary: Dictionary <String, AnyObject>?)
     func cancelSub()
 }
 
@@ -130,7 +130,7 @@ open class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
     }
     
     func payOther(_ subRef: String, codeISO: String, amount: NSNumber){
-        delegate.payWithOtherPay(subRef: subRef, codeISO: codeISO, amount: amount)
+        delegate.payWithOtherPay(subRef: subRef, codeISO: codeISO, amount: amount, dictionary: nil )
     }
     
     func cancelSub(){

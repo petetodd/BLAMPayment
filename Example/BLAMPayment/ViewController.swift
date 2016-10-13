@@ -46,7 +46,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
 
         
     }
-    func payWithOtherPay(subRef: String, codeISO: String, amount: NSNumber){
+    func payWithOtherPay(subRef: String, codeISO: String, amount: NSNumber, dictionary: Dictionary <String, AnyObject>?){
         let message = "The user would like to enroll for \(subRef) using another method of payment at a cost of \(codeISO)\(amount).  You need to implement this!"
         let alert = UIAlertController(title: "Pay with Other Payment method",
                                       message: message,
