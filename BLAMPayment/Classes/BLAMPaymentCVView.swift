@@ -23,7 +23,15 @@ open class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
     
     let dataSource = BLAMPaymentCVDataSource()
     var dictData : Dictionary <String, BLAMPaymentItemModel>!
-
+    
+    /*
+    The default is to show an Apple Pay button with a small "pay other"
+    We also want to handle a simple select option where the user taps and the presented UI
+     (e.g. braintree) will handle payment type selection.
+ */
+ 
+    open var paymentType : String?  // if "Subscription" then single button shown
+    open var paymentTypeText : String? // Optionally the button text to display
 
     // Only override drawRect: if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -111,6 +119,8 @@ open class BLAMPaymentCVView: UIView, BLAMPaymentCVCellProtocol {
     }
     
     open func addDisplayItem(_ inDict : Dictionary <String, AnyObject>){
+        
+        
         let itemModel = BLAMPaymentItemModel.init(awesomeIcon: inDict["awesomeIcon"]! as! String, strTitle: inDict["strTitle"]! as! String, strDesc: inDict["strDesc"]! as! String, text1: inDict["text1"]! as! String, text2: inDict["text2"]! as! String, text3: inDict["text3"]! as! String, text4: inDict["text4"]! as! String, textPrice: inDict["textPrice"]! as! String, price : inDict["price"]! as! NSNumber, codeISO : inDict["codeISO"]! as! String, subRef : inDict["subRef"]! as! String, isActive :  inDict["isActive"]! as! String, dateRenew : inDict["dateRenew"]! as? Date)
         // dictData = [inDict["valDisplayOrder"]!: itemModel]
         let strDisplayOrder = ("Order:\(inDict["displayOrder"]!)")

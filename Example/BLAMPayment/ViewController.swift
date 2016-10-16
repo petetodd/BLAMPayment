@@ -10,7 +10,11 @@ import UIKit
 import BLAMPayment
 
 class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
-    
+
+    var displayOption = DisplayOption.normal
+    var paymentTypeText : String?
+
+
  
     @IBOutlet weak var viewBLAMPayment: BLAMPaymentCVView!
     
@@ -23,6 +27,9 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
 
     }
     
+    @IBAction func butcancelAction(_ sender: AnyObject) {
+        dismiss(animated: true, completion: nil)
+    }
 
     override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
         viewBLAMPayment.configAll()
@@ -78,6 +85,17 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
      */
     
     func configBLAM(){
+        if displayOption  == DisplayOption.subscribe{
+            viewBLAMPayment.paymentType = "Subscription"
+        }
+        if displayOption  == DisplayOption.subscribeText{
+            viewBLAMPayment.paymentType = "Subscription"
+            if self.paymentTypeText != nil{
+                viewBLAMPayment.paymentTypeText = self.paymentTypeText
+            }
+        }
+        
+        
         
     }
  
@@ -114,7 +132,7 @@ class ViewController: UIViewController, BLAMPaymentCVViewProtocol {
         dictData["text2"] =  valText2 as AnyObject
         dictData["text3"] =  valText3 as AnyObject
         dictData["text4"] =  valText4 as AnyObject
-        dictData["10"] =  valTextPrice as AnyObject
+        dictData["textPrice"] =  valTextPrice as AnyObject
         dictData["price"] =  valPrice
         dictData["codeISO"] =  valCurrCode  as AnyObject
         dictData["subRef"] =  subRef  as AnyObject

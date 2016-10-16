@@ -140,19 +140,39 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
             
             
         }else{ // Show pay options
-            cell.butOtherPayOptions.isHidden = false
+            // Handle subscription type
+            if callingView.paymentType == "Subscription"{
+                cell.butOtherPayOptions.isHidden = true
+                
+                // This is the selected subscription - show a cancel option and renewal date
+                let butSubscribe = UIButton()
+                butSubscribe.setTitle("Subscribe", for: UIControlState())
+                butSubscribe.tag = 100
+                butSubscribe.addTarget(cell, action: #selector(cell.butOtherAction(_:)), for: .touchUpInside)
+                butSubscribe.frame = cell.viewPayFrame.frame
+                butSubscribe.backgroundColor = UIColor.lightGray
 
-            let butApplePay = PKPaymentButton()
-            butApplePay.tag = 100
-            butApplePay.addTarget(cell, action: #selector(cell.butApplePAyAction), for: .touchUpInside)
-            butApplePay.frame = cell.viewPayFrame.frame
-            cell.addSubview(butApplePay)
-            let lblRenewDate = cell.viewWithTag(500)
-            if lblRenewDate != nil{
-                lblRenewDate?.removeFromSuperview()
+                
+                // Check for custom text
+                if callingView.paymentTypeText != nil{
+                    butSubscribe.setTitle(callingView.paymentTypeText, for: UIControlState())
+                }
+                
+                cell.addSubview(butSubscribe)
+                
+            }else {
+                cell.butOtherPayOptions.isHidden = false
+                
+                let butApplePay = PKPaymentButton()
+                butApplePay.tag = 100
+                butApplePay.addTarget(cell, action: #selector(cell.butApplePAyAction), for: .touchUpInside)
+                butApplePay.frame = cell.viewPayFrame.frame
+                cell.addSubview(butApplePay)
+                let lblRenewDate = cell.viewWithTag(500)
+                if lblRenewDate != nil{
+                    lblRenewDate?.removeFromSuperview()
+                }
             }
-            
-            
         }
         
 
