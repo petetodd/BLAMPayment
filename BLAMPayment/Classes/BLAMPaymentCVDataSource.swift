@@ -88,26 +88,14 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
 
         }
         
-        
-       /*
-        // Apple Pay button
-        // Check if payment is required - not required for free services of services already registered.
-        if dataModel?.price  == 0 {
-            // Price
-            cell.lblPrice.text = dataModel?.textPrice
-            cell.butOtherPayOptions.isHidden = true
-            let viewApple = cell.viewWithTag(100)
-            if viewApple != nil{
-                viewApple?.removeFromSuperview()
-            }
-            return cell
-        }
- */
         // Create a price label with amount and currency code (if supported)
         cell.viewPayFrame.isHidden = false
         
         let strCurrCode = currCodeHexFromISO((dataModel?.codeISO)!)
-        let strLabelPrice = "\(strCurrCode)\(dataModel!.price) \(dataModel!.textPrice)"
+        var strLabelPrice = "\(strCurrCode)\(dataModel!.price) \(dataModel!.textPrice)"
+        if dataModel?.price  == 0 { // Do not show price for FREE subscriptions
+            strLabelPrice = "\(dataModel!.textPrice)"
+        }
         // Price
         cell.lblPrice.text = strLabelPrice
         
@@ -176,14 +164,6 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
             }
         }
         
-
-
-
-        
-        
-      
-        
-        //let item1 = BLAMPaymentItemModel.init(awesomeIcon: "fa-subway", strTitle: "Single user", strDesc: "Manage a single rental asset.  Record property details, bookings, tenants and income /expenditure.", text1: "Single Asset", text2: "Multiple device sync", text3: "No team sharing", text4: "No client sharing", textPrice: "FREE")
         return cell
     }
     
