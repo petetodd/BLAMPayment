@@ -89,7 +89,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         }
         
         
-        
+       /*
         // Apple Pay button
         // Check if payment is required - not required for free services of services already registered.
         if dataModel?.price  == 0 {
@@ -102,6 +102,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
             }
             return cell
         }
+ */
         // Create a price label with amount and currency code (if supported)
         cell.viewPayFrame.isHidden = false
         
