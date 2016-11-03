@@ -117,17 +117,19 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
             lblRenewDate.frame = rectFrame
 
             cell.butOtherPayOptions.isHidden = true
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "dd MMMM"
-            let txtDate = dateFormatter.string(from: (dataModel?.dateRenew!)! as Date)
-            lblRenewDate.text = "Next payment: \(txtDate)"
-            lblRenewDate.tag = 500
-            cell.addSubview(lblRenewDate)
 
-
-            
-            
+            if dataModel?.price  == 0 { // Do not show renewal date for FREE subscriptions
+                lblRenewDate.text = ""
+            } else {
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "dd MMMM"
+                let txtDate = dateFormatter.string(from: (dataModel?.dateRenew!)! as Date)
+                lblRenewDate.text = "Next payment: \(txtDate)"
+                lblRenewDate.tag = 500
+                
+                cell.addSubview(lblRenewDate)
+            }
+  
         }else{ // Show pay options
             // Handle subscription type
             if callingView.paymentType == "Subscription"{
