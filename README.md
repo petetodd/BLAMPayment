@@ -5,13 +5,23 @@
 [![License](https://img.shields.io/cocoapods/l/BLAMPayment.svg?style=flat)](http://cocoapods.org/pods/BLAMPayment)
 [![Platform](https://img.shields.io/cocoapods/p/BLAMPayment.svg?style=flat)](http://cocoapods.org/pods/BLAMPayment)
 
-## Example
+## Subscription management
+Present users with a customised set of subscription options, highlight the current subscription and/or select a new subscription or cancel an existing subscription.  Present with either a single Subscribe button or Apple Pay and Other buttons.
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+Button taps trigger delegate protocols which send the details of the selected Subscription.
+
+The included demo app provides a basic example.
+
+### Default presentation
+![alt text](Example/demoDefault.png "Apple Button and Other option")
+### Single button presentation
+![alt text](Example/demoSubscription.png "Single Subscription button")
 
 ## Requirements
+iOS9.3
 
 ## Installation
+To run the example project, clone the repo, and run `pod install` from the Example directory.
 
 BLAMPayment is available through [CocoaPods](http://cocoapods.org). To install
 it, simply add the following line to your Podfile:
