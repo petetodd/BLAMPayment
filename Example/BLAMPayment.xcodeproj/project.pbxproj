@@ -14,6 +14,8 @@
 		781BBAE64E9523B968AAA7D6 /* Pods_BLAMPayment_Example.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 44CCE906D44EE81DC3ACB152 /* Pods_BLAMPayment_Example.framework */; };
 		AFE84B7F03D5F1B42B10FFB9 /* Pods_BLAMPayment_Tests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6E97D130952F8E185F08C5F2 /* Pods_BLAMPayment_Tests.framework */; };
 		D07EA5C01D6B397B00E972E6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D07EA5BF1D6B397B00E972E6 /* Main.storyboard */; };
+		D0AD477E1DCF6B7600126397 /* demoDefault.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AD477C1DCF6B7600126397 /* demoDefault.png */; };
+		D0AD477F1DCF6B7600126397 /* demoSubscription.png in Resources */ = {isa = PBXBuildFile; fileRef = D0AD477D1DCF6B7600126397 /* demoSubscription.png */; };
 		D0F3BCEE1DB3BB34004A853F /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0F3BCED1DB3BB34004A853F /* MenuViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,6 +48,8 @@
 		6FA2C0037E27B99598D79051 /* Pods-BLAMPayment_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BLAMPayment_Example.debug.xcconfig"; path = "Pods/Target Support Files/Pods-BLAMPayment_Example/Pods-BLAMPayment_Example.debug.xcconfig"; sourceTree = "<group>"; };
 		7DA39003DDE5ACDE4298D6EB /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 		D07EA5BF1D6B397B00E972E6 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		D0AD477C1DCF6B7600126397 /* demoDefault.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demoDefault.png; sourceTree = "<group>"; };
+		D0AD477D1DCF6B7600126397 /* demoSubscription.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = demoSubscription.png; sourceTree = "<group>"; };
 		D0F3BCED1DB3BB34004A853F /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -83,6 +87,7 @@
 		607FACC71AFB9204008FA782 = {
 			isa = PBXGroup;
 			children = (
+				D0AD477B1DCF6AED00126397 /* DemoImages */,
 				607FACF51AFB993E008FA782 /* Podspec Metadata */,
 				607FACD21AFB9204008FA782 /* Example for BLAMPayment */,
 				607FACE81AFB9204008FA782 /* Tests */,
@@ -157,6 +162,15 @@
 				6E97D130952F8E185F08C5F2 /* Pods_BLAMPayment_Tests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D0AD477B1DCF6AED00126397 /* DemoImages */ = {
+			isa = PBXGroup;
+			children = (
+				D0AD477C1DCF6B7600126397 /* demoDefault.png */,
+				D0AD477D1DCF6B7600126397 /* demoSubscription.png */,
+			);
+			name = DemoImages;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -248,9 +262,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D0AD477E1DCF6B7600126397 /* demoDefault.png in Resources */,
 				D07EA5C01D6B397B00E972E6 /* Main.storyboard in Resources */,
 				607FACE01AFB9204008FA782 /* LaunchScreen.xib in Resources */,
 				607FACDD1AFB9204008FA782 /* Images.xcassets in Resources */,
+				D0AD477F1DCF6B7600126397 /* demoSubscription.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
