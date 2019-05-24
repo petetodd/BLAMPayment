@@ -49,18 +49,19 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
      //   cell.lblIcon.font =  UIFont(name: "FontAwesome", size: 60)
         
         // Dynamically load font
-     //   let podBundle = Bundle(for: BLAMPaymentCVView.self)
-        let podBundle = Bundle(path: Bundle(for: BLAMPaymentCVView.self).path(forResource: "BLAMPayment", ofType: "bundle")!)
+        let podBundle = Bundle(for: BLAMPaymentCVView.self)
+       // let podBundle = Bundle(path: Bundle(for: BLAMPaymentCVView.self).path(forResource: "BLAMPayment", ofType: "bundle")!)
+      //  print(podBundle)
 
 
-        let fontURL = podBundle?.url(forResource: "fontawesome-webfont", withExtension: "ttf")
-        CTFontManagerRegisterFontsForURL(fontURL as! CFURL, CTFontManagerScope.process, nil)
+        let fontURL = podBundle.url(forResource: "fontawesome-webfont", withExtension: "ttf")
+        CTFontManagerRegisterFontsForURL(fontURL! as CFURL, CTFontManagerScope.process, nil)
         let fontAwesome = UIFont(name: "FontAwesome", size: 60)
-        let attrs = [NSFontAttributeName : fontAwesome!,
-                     NSForegroundColorAttributeName : UIColor.red,
-                     NSBaselineOffsetAttributeName : 0.0] as AnyObject
+        let attrs = [NSAttributedString.Key.font : fontAwesome!,
+                     NSAttributedString.Key.foregroundColor : UIColor.red,
+                     NSAttributedString.Key.baselineOffset : 0.0] as AnyObject
         
-        let nameAttrSring = NSAttributedString(string: (dataModel?.awesomeIcon)!, attributes: attrs as! [String : Any])
+        let nameAttrSring = NSAttributedString(string: (dataModel?.awesomeIcon)!, attributes: attrs as? [NSAttributedString.Key : Any])
         
         cell.lblIcon.attributedText = nameAttrSring
 
@@ -105,7 +106,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
         if (dataModel?.isActive == "TRUE"){
             // This is the selected subscription - show a cancel option and renewal date
             let butCancel = UIButton()
-            butCancel.setTitle("Cancel Subscription", for: UIControlState())
+            butCancel.setTitle("Cancel Subscription", for: UIControl.State())
             butCancel.tag = 100
             butCancel.addTarget(cell, action: #selector(cell.butCancelAction), for: .touchUpInside)
             butCancel.frame = cell.viewPayFrame.frame
@@ -137,7 +138,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
                 
                 // This is the selected subscription - show a cancel option and renewal date
                 let butSubscribe = UIButton()
-                butSubscribe.setTitle("Subscribe", for: UIControlState())
+                butSubscribe.setTitle("Subscribe", for: UIControl.State())
                 butSubscribe.tag = 100
                 butSubscribe.addTarget(cell, action: #selector(cell.butOtherAction(_:)), for: .touchUpInside)
                 butSubscribe.frame = cell.viewPayFrame.frame
@@ -146,7 +147,7 @@ class BLAMPaymentCVDataSource: NSObject, UICollectionViewDataSource {
                 
                 // Check for custom text
                 if callingView.paymentTypeText != nil{
-                    butSubscribe.setTitle(callingView.paymentTypeText, for: UIControlState())
+                    butSubscribe.setTitle(callingView.paymentTypeText, for: UIControl.State())
                 }
                 
                 cell.addSubview(butSubscribe)

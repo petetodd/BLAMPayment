@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BLAMPayment'
-  s.version          = '0.0.10'
+  s.version          = '0.0.11'
   s.summary          = 'A Collection View based interface for selecting enrollment options.  To implement simply subclass a UIView.'
 
 # This description is used to generate tags and improve search results.
@@ -29,11 +29,10 @@ A configurable subscription selection interface to enable a user to view the fea
   s.social_media_url = 'https://twitter.com/PeteTodd'
 
   s.ios.deployment_target = '9.3'
+  s.swift_version = '4.2'
 
   s.source_files = 'BLAMPayment/Classes/**/*'
-    s.resource_bundles = {
-'BLAMPayment' => ['BLAMPayment/Classes/**/*.{storyboard,xib}', 'BLAMPayment/Assets/Fonts/*.{ttf}']
-}
+
 
   # s.resource_bundles = {
   #   'BLAMPayment' => ['BLAMPayment/Assets/*.png']
