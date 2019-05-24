@@ -59,12 +59,12 @@ class BLAMPaymentCVCell: UICollectionViewCell {
         }
     }
     
-    func butApplePAyAction(){
+    @objc func butApplePAyAction(){
         delegate.payApple(model.subRef, codeISO: model.codeISO, amount: model.price)
 
     }
     
-    func butCancelAction(){
+    @objc func butCancelAction(){
         delegate.cancelSub()
     }
 }

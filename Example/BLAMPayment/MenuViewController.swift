@@ -55,14 +55,10 @@ class MenuViewController: UIViewController {
         performSegue(withIdentifier: "segueShowSelector", sender: self)
     }
     
-    @IBAction func butSubscribeAction(_ sender: AnyObject) {
-        displayOption = DisplayOption.subscribe
-        performSegue(withIdentifier: "segueShowSelector", sender: self)
-    }
-    
+
     @IBAction func butSubscribeTextAction(_ sender: AnyObject) {
         displayOption = DisplayOption.subscribeText
-        if (txtCustom.text?.characters.count)! > 0{
+        if (txtCustom.text?.count ?? 0 > 0){
             paymentTypeText = txtCustom.text
         }else {
             paymentTypeText = ""
